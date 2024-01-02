@@ -44,6 +44,7 @@ const Header: React.FC = () => {
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={380}
               height={380}
+              priority={true}
             />
           </div>
         </div>
