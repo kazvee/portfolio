@@ -3,14 +3,15 @@ import Link from 'next/link';
 interface NavlinkProps {
   href: string;
   title: string;
-  textColor: string;
+  hoverTextColor: string;
 }
 
-const Navlink: React.FC<NavlinkProps> = ({ href, title, textColor }) => {
+const Navlink: React.FC<NavlinkProps> = ({ href, title, hoverTextColor }) => {
   return (
     <Link
       href={href}
-      className={`block py-2 pl-3 pr-4 sm:text-xl rounded md:p-0 hover:text-${textColor}-500`}>
+      passHref
+      className={`block py-2 pl-3 pr-4 sm:text-xl rounded md:p-0 ${hoverTextColor}`}>
       {title}
     </Link>
   );

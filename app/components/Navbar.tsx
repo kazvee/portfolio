@@ -7,17 +7,17 @@ const navLinks = [
   {
     title: 'About',
     path: '#about',
-    textColor: 'fuchsia',
+    hoverTextColor: 'hover:text-purple-500',
   },
   {
     title: 'Projects',
     path: '#projects',
-    textColor: 'pink',
+    hoverTextColor: 'hover:text-pink-500',
   },
   {
     title: 'Contact',
     path: '#contact',
-    textColor: 'red',
+    hoverTextColor: 'hover:text-red-500',
   },
 ];
 
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
                 <Navlink
                   href={link.path}
                   title={link.title}
-                  textColor={link.textColor}
+                  hoverTextColor={link.hoverTextColor}
                 />
               </li>
             ))}
