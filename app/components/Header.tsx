@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import headerImage from '@/public/images/header-image.png'
 
 const Header: React.FC = () => {
   return (
@@ -38,7 +39,7 @@ const Header: React.FC = () => {
         <div className="col-span-4 place-self-center mt-8 ml-8 sm:mt-2 sm:ml-0">
           <div className="rounded-full bg-pink-900 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/header-image.png"
+              src={headerImage}
               alt="black-capped chickadee bird sitting on a redcurrant shrub"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={380}
