@@ -24,7 +24,7 @@ const navLinks = [
 const Navbar: React.FC = () => {
   return (
     <nav className="fixed mx-auto border border-[#482B56] top-0 left-0 right-0 z-6 bg-[#170E1B] bg-opacity-90">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-12">
+      <div className="flex items-center justify-between mx-auto px-12">
         <Link href="/" className="container mx-auto px-2 py-4">
           <Image
             src={logoImage}
