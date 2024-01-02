@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import headerImage from '@/public/images/header-image.png'
+import headerImage from '@/public/images/header-image.png';
 
 const Header: React.FC = () => {
   return (
-    <section>
+    <section className="mt-20">
       <div className="grid grid-cols-1 sm:grid-cols-12">
-        <div className="col-span-7 place-self-center text-center sm:text-left justify-self-start">
+        <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-extrabold">
             Hi there, I&apos;m{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
@@ -44,6 +44,7 @@ const Header: React.FC = () => {
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={380}
               height={380}
+              priority={true}
             />
           </div>
         </div>
