@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="col-span-4 place-self-center mt-8 ml-8 sm:mt-2 sm:ml-0">
+        <div className="col-span-4 place-self-center mt-8 lg:ml-8 sm:mt-2 sm:ml-0">
           <div className="rounded-full bg-pink-900 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src={headerImage}
