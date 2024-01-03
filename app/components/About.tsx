@@ -8,7 +8,7 @@ const TAB_DATA = [
     id: 'frontend',
     content: (
       <div className="flex justify-center">
-        <ul className="list-none text-xl text-left">
+        <ul className="list-none text-base lg:text-lg text-left">
           <li>JavaScript</li>
           <li>TypeScript</li>
           <li>React</li>
@@ -24,7 +24,7 @@ const TAB_DATA = [
     id: 'backend',
     content: (
       <div className="flex justify-center">
-        <ul className="list-none text-xl text-left">
+        <ul className="list-none text-base lg:text-lg text-left">
           <li>Node</li>
           <li>Express</li>
           <li>Rails</li>
@@ -37,7 +37,7 @@ const TAB_DATA = [
     id: 'db-testing',
     content: (
       <div className="flex justify-center">
-        <ul className="list-none text-xl text-left">
+        <ul className="list-none text-base lg:text-lg text-left">
           <li>PostgreSQL</li>
           <li>MongoDB</li>
           <li>DynamoDB</li>
@@ -65,10 +65,10 @@ const About: React.FC = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-1 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-2">
+      <div className="md:grid md:grid-cols-1 gap-8 items-center py-8 px-0 lg:px-4 xl:gap-16 sm:py-16 xl:px-2">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
+          <p className="text-base lg:text-xl">
             I am a full stack web developer with a background in telecoms and
             technical support. Friendly and collaborative, I overcome challenges
             with a combination of cheerful determination, grit, and resilience
