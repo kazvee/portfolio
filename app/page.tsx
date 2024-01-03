@@ -1,3 +1,4 @@
+import About from './components/About';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <div className="container mt-12 mx-auto px-12 py-4">
         <Header />
+        <About />
       </div>
     </main>
   );
