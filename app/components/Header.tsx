@@ -22,6 +22,8 @@ const Header: React.FC = () => {
           <div>
             <Link
               href="https://www.linkedin.com/in/kazvee/"
+              target="_blank" 
+              rel="noopener noreferrer"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full text-white mt-3">
               <span className="block bg-gradient-to-br from-pink-900 to-pink-700 hover:from-pink-700 hover:to-pink-900 rounded-full px-5 py-2">
                 Connect with me on LinkedIn
@@ -29,6 +31,8 @@ const Header: React.FC = () => {
             </Link>
             <Link
               href="https://github.com/kazvee/"
+              target="_blank" 
+              rel="noopener noreferrer"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full text-white mt-3">
               <span className="block bg-gradient-to-br from-pink-900 to-pink-700 hover:from-pink-700 hover:to-pink-900 rounded-full px-5 py-2">
                 Visit my GitHub page
