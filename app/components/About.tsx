@@ -1,19 +1,18 @@
 'use client';
-import Image from 'next/image';
-import aboutImage from '@/public/images/about-image.jpg';
 import TabButton from './TabButton';
 import { SetStateAction, useState, useTransition } from 'react';
 
 const TAB_DATA = [
   {
-    title: 'Languages',
-    id: 'languages',
+    title: 'Frontend',
+    id: 'frontend',
     content: (
       <div className="flex justify-center">
         <ul className="list-none text-xl text-left">
           <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
           <li>Ruby</li>
-          <li>SQL</li>
           <li>HTML</li>
           <li>CSS (& Sass)</li>
         </ul>
@@ -21,13 +20,11 @@ const TAB_DATA = [
     ),
   },
   {
-    title: 'Frameworks / Libraries / Environments',
-    id: 'frameworks-libraries-environments',
+    title: 'Backend',
+    id: 'backend',
     content: (
       <div className="flex justify-center">
         <ul className="list-none text-xl text-left">
-          <li>React</li>
-          <li>Next.js</li>
           <li>Node</li>
           <li>Express</li>
           <li>Rails</li>
@@ -36,8 +33,8 @@ const TAB_DATA = [
     ),
   },
   {
-    title: 'Systems / Databases',
-    id: 'systems-databases',
+    title: 'Database & Testing',
+    id: 'db-testing',
     content: (
       <div className="flex justify-center">
         <ul className="list-none text-xl text-left">
@@ -45,17 +42,6 @@ const TAB_DATA = [
           <li>MongoDB</li>
           <li>DynamoDB</li>
           <li>Supabase</li>
-          <li>Git (& GitHub)</li>
-        </ul>
-      </div>
-    ),
-  },
-  {
-    title: 'Testing',
-    id: 'testing',
-    content: (
-      <div className="flex justify-center">
-        <ul className="list-none text-xl text-left">
           <li>Cypress</li>
           <li>Jest</li>
           <li>Mocha</li>
@@ -79,14 +65,7 @@ const About: React.FC = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-2">
-        <Image
-          src={aboutImage}
-          alt="close up shot of a computer keyboard under purple lighting"
-          width={500}
-          height={500}
-          className="rounded-2xl"
-        />
+      <div className="md:grid md:grid-cols-1 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-2">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
@@ -97,43 +76,28 @@ const About: React.FC = () => {
             opportunities to collaborate and contribute to meaningful projects
             and conversations.
           </p>
-          <div className="flex flex-row justify-start mt-8 lg:text-xl align-start">
+
+          <div className="flex flex-row justify-center lg:text-2xl mt-8">
             <TabButton
-              selectTab={() => handleTabChange('languages')}
-              active={tab === 'languages'}
-              id="languages">
+              selectTab={() => handleTabChange('frontend')}
+              active={tab === 'frontend'}
+              id="frontend">
               {' '}
-              Languages{' '}
+              Frontend{' '}
             </TabButton>
             <TabButton
-              selectTab={() =>
-                handleTabChange('frameworks-libraries-environments')
-              }
-              active={tab === 'frameworks-libraries-environments'}
-              id="frameworks-libraries-environments">
+              selectTab={() => handleTabChange('backend')}
+              active={tab === 'backend'}
+              id="backend">
               {' '}
-              Frameworks
-              <br />
-              Libraries
-              <br />
-              Environments{' '}
+              Backend
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange('systems-databases')}
-              active={tab === 'systems-databases'}
-              id="systems-databases">
+              selectTab={() => handleTabChange('db-testing')}
+              active={tab === 'db-testing'}
+              id="db-testing">
               {' '}
-              Systems
-              <br />
-              Databases{' '}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange('testing')}
-              active={tab === 'testing'}
-              id="testing"
-            >
-              {' '}
-              Testing{' '}
+              Database & Testing
             </TabButton>
           </div>
           <div className="mt-8">
