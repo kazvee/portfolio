@@ -6,7 +6,7 @@ import Link from 'next/link';
 const Footer: React.FC = () => {
   return (
     <footer className="footer border z-10 border-t-[#B6688A] border-l-transparent border-r-transparent text-pink-500">
-      <div className="container p-12 flex justify-between items-center">
+      <div className="container p-0 md:p-12 flex justify-between items-center">
         <span>
           Chickadee photo by{' '}
           <Link
