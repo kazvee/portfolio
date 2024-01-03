@@ -17,11 +17,6 @@ const navLinks = [
     path: '#projects',
     hoverTextColor: 'hover:text-pink-500',
   },
-  {
-    title: 'Contact',
-    path: '#contact',
-    hoverTextColor: 'hover:text-red-500',
-  },
 ];
 
 const Navbar: React.FC = () => {
@@ -54,7 +49,7 @@ const Navbar: React.FC = () => {
           )}
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:px-2 md:py:2 md:flex-row md:space-x-8 mt-10">
+          <ul className="flex p-4 md:px-2 md:py:2 md:flex-row md:space-x-8 mt-10 mr-4">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Navlink
