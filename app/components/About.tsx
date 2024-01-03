@@ -12,9 +12,12 @@ const TAB_DATA = [
           <li>JavaScript</li>
           <li>TypeScript</li>
           <li>React</li>
+          <li>NextJS</li>
           <li>Ruby</li>
           <li>HTML</li>
-          <li>CSS (& Sass)</li>
+          <li>CSS</li>
+          <li>Sass</li>
+          <li>Tailwind</li>
         </ul>
       </div>
     ),
@@ -28,6 +31,7 @@ const TAB_DATA = [
           <li>Node</li>
           <li>Express</li>
           <li>Rails</li>
+          <li>API</li>
         </ul>
       </div>
     ),
@@ -40,7 +44,6 @@ const TAB_DATA = [
         <ul className="list-none text-base lg:text-lg text-left">
           <li>PostgreSQL</li>
           <li>MongoDB</li>
-          <li>DynamoDB</li>
           <li>Supabase</li>
           <li>Cypress</li>
           <li>Jest</li>
@@ -70,11 +73,11 @@ const About: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-xl">
             I am a full stack web developer with a background in telecoms and
-            technical support. Friendly and collaborative, I overcome challenges
-            with a combination of cheerful determination, grit, and resilience
-            gained through an established work ethic. I enjoy exploring
-            opportunities to collaborate and contribute to meaningful projects
-            and conversations.
+            technical support. Friendly and collaborative, I enjoy overcoming
+            challenges with a combination of cheerful determination, grit, and
+            resilience gained through an established work ethic. I would love to
+            explore opportunities to collaborate and contribute to meaningful
+            projects and conversations, please feel free to say hello! 🙂
           </p>
 
           <div className="flex flex-row justify-center lg:text-2xl mt-8">
