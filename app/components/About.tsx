@@ -76,8 +76,8 @@ const About: React.FC = () => {
             technical support. Friendly and collaborative, I enjoy overcoming
             challenges with a combination of cheerful determination, grit, and
             resilience gained through an established work ethic. I would love to
-            explore opportunities to collaborate and contribute to meaningful
-            projects and conversations, please feel free to say hello! 🙂
+            explore opportunities to contribute to meaningful projects and
+            conversations, so please feel free to say hello! 🙂
           </p>
 
           <div className="flex flex-row justify-center lg:text-2xl mt-8">
