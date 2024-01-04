@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import TabButton from './TabButton';
 import { SetStateAction, useState, useTransition } from 'react';
 
@@ -81,11 +82,16 @@ const About: React.FC = () => {
             <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500">
               {' '}
               reach out to me on{' '}
-              <span className='text-blue-500'>
-              LinkedIn!
+              <span className="text-blue-500">
+                <Link
+                  href="https://www.linkedin.com/in/kazvee/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  LinkedIn
+                </Link>
               </span>
             </span>
-            🙂
+            {' '}🙂
           </p>
           <div className="flex flex-row justify-center lg:text-2xl mt-8">
             <TabButton
