@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👩‍💻 Portfolio
 
-## Getting Started
+## Purpose
 
-First, run the development server:
+This is the repo for my portfolio website, which you can visit ✨[HERE](https://kazvee.heliohost.us/)✨
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I built this for some hands-on learning about what Next.js 14 can offer as a full-stack React framework.  
+It's currently been deployed as a static site, but I plan to build out a backend solution using the [App Router](https://nextjs.org/docs/app) method, since it's currently the recommended approach for new applications.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I've written the project in TypeScript in order to re-familiarize myself with static typing in JavaScript since I haven't used TS in a while.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I'm enjoying Tailwind's utility-first approach so far. I especially like that I don't need to think of my own CSS class names! 😃
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshots of Current Iteration
 
-## Learn More
+![Main View](/public/images/readme/Portfolio_Main_View.png)
 
-To learn more about Next.js, take a look at the following resources:
+![Projects View](/public/images/readme/Projects_View.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Built With
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* [Next.js 14](https://nextjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Node.js](https://nodejs.org/) v20.10
 
-## Deploy on Vercel
+## Acknowledgements & Thanks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Chickadee photo by [teyi 徐](https://www.pexels.com/photo/black-capped-chickadee-bird-on-a-redcurrant-shrub-19097681/) from [Pexels](https://www.pexels.com/)
+* Icons from [icons8](https://icons8.com/)
+* Web hosting by [HelioHost](https://heliohost.org/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Installation
+
+* Clone this repo to your local machine
+* From the project root in your terminal, install dependencies using the `npm i` (or `npm install`) command
+
+### Start the Development Server
+* Run `npm run dev`
+* The development app will be served at [http://localhost:3000/](http://localhost:3000/)
+
+### Linting
+* To check your code for potential errors, stylistic issues, or other problems, run `npm run lint`
+
+### Build the Production-Ready Application
+* Run `npm run build`
+  * This will generate deployment-ready static pages inside the `out` folder
+
+#### Start the Production Server
+* Run `npx serve@latest out`
+* The production app will be served at [http://localhost:3000/](http://localhost:3000/)
