@@ -77,7 +77,14 @@ const About: React.FC = () => {
             challenges with a combination of cheerful determination, grit, and
             resilience gained through an established work ethic. I would love to
             explore opportunities to contribute to meaningful projects and
-            conversations, so please feel free to reach out to me on LinkedIn!
+            conversations, so please feel free to{' '}
+            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500">
+              {' '}
+              reach out to me on{' '}
+              <span className='text-blue-500'>
+              LinkedIn!
+              </span>
+            </span>
             🙂
           </p>
           <div className="flex flex-row justify-center lg:text-2xl mt-8">
