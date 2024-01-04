@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import TabButton from './TabButton';
 import { SetStateAction, useState, useTransition } from 'react';
 
@@ -67,7 +68,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-white pt-20" id="about">
       <div className="md:grid md:grid-cols-1 gap-8 items-center py-8 px-0 lg:px-4 xl:gap-16 sm:py-16 xl:px-2">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
@@ -77,9 +78,21 @@ const About: React.FC = () => {
             challenges with a combination of cheerful determination, grit, and
             resilience gained through an established work ethic. I would love to
             explore opportunities to contribute to meaningful projects and
-            conversations, so please feel free to say hello! 🙂
+            conversations, so please feel free to{' '}
+            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500">
+              {' '}
+              reach out to me on{' '}
+              <span className="text-blue-500">
+                <Link
+                  href="https://www.linkedin.com/in/kazvee/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  LinkedIn
+                </Link>
+              </span>
+            </span>
+            {' '}🙂
           </p>
-
           <div className="flex flex-row justify-center lg:text-2xl mt-8">
             <TabButton
               selectTab={() => handleTabChange('frontend')}
