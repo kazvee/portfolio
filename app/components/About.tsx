@@ -77,9 +77,9 @@ const About: React.FC = () => {
             challenges with a combination of cheerful determination, grit, and
             resilience gained through an established work ethic. I would love to
             explore opportunities to contribute to meaningful projects and
-            conversations, so please feel free to say hello! 🙂
+            conversations, so please feel free to reach out to me on LinkedIn!
+            🙂
           </p>
-
           <div className="flex flex-row justify-center lg:text-2xl mt-8">
             <TabButton
               selectTab={() => handleTabChange('frontend')}
