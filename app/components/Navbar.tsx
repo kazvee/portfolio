@@ -10,7 +10,7 @@ const navLinks = [
   {
     title: 'About',
     path: '#about',
-    hoverTextColor: 'hover:text-purple-500',
+    hoverTextColor: 'hover:text-pink-500',
   },
   {
     title: 'Projects',
