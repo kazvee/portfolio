@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: '🐾 PawTrackr',
     gitUrl: 'https://github.com/kazvee/PawTrackr/#readme',
-    description: 'Full-stack Pet Care Management (Group Project)',
+    description: 'Full-stack Pet Care Management app (Group Project)',
     tools: '⚙️ React, NodeJS, Express, Axios, Bootstrap, PostgreSQL',
     image: '/images/projects/project-1.png',
     tag: ['All', 'Full Stack'],
@@ -37,7 +37,7 @@ const projectsData = [
     id: 4,
     title: '🖼️ PhotoLabs',
     gitUrl: 'https://github.com/kazvee/photolabs/#readme',
-    description: 'Stock photo browsing app',
+    description: 'Stock Photo browsing app',
     tools:
       '⚙️ React, Express, PostgreSQL, API, Babel, Dotenv, SPA (Single Page Application)',
     image: '/images/projects/project-4.png',
@@ -47,7 +47,7 @@ const projectsData = [
     id: 5,
     title: '🧮 Two Player Math Game',
     gitUrl: 'https://github.com/kazvee/two_player_game/#readme',
-    description: 'Terminal based math game',
+    description: 'Terminal based Math Game',
     tools: '⚙️ Ruby, OOP (Object Oriented Programming)',
     image: '/images/projects/project-5.png',
     tag: ['All', 'Ruby'],
@@ -56,7 +56,7 @@ const projectsData = [
     id: 6,
     title: '🐦 Tweeter',
     gitUrl: 'https://github.com/kazvee/tweeter/#readme',
-    description: 'Single-page social media app',
+    description: 'Single-page Social Media app',
     tools:
       '⚙️ JavaScript, NodeJS, Express, HTML, CSS, SASS, jQuery, AJAX, SPA (Single Page Application)',
     image: '/images/projects/project-6.png',
@@ -66,7 +66,7 @@ const projectsData = [
     id: 7,
     title: '📚 Resource Wall (Group Project)',
     gitUrl: 'https://github.com/kazvee/resource-wall/#readme',
-    description: 'Resource sharing site for internet links, blogs, or videos',
+    description: 'Full-stack Resource Sharing Site for internet links, blogs, or videos',
     tools: '⚙️ JavaScript, NodeJS, Express, PostgreSQL, CSS, SASS, EJS',
     image: '/images/projects/project-7.png',
     tag: ['All', 'Full Stack'],
@@ -76,7 +76,7 @@ const projectsData = [
     title: '🍛 Recipe Rank',
     gitUrl: 'https://github.com/kazvee/recipe-rank/#readme',
     description:
-      'Full-stack Recipe Sharing site enabling users to vote on recipes',
+      'Full-stack Recipe Sharing Site enabling users to vote on recipes',
     tools: '⚙️ React, Supabase, Netlify',
     image: '/images/projects/project-8.png',
     tag: ['All', 'Full Stack'],
@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects">
+    <section className="pt-36" id="projects">
       <h2 className="text-center text-4xl font-bold text-white mb-8 pt-108 md:mb-12">
         My Projects
       </h2>
