@@ -67,7 +67,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-white pt-20" id="about">
       <div className="md:grid md:grid-cols-1 gap-8 items-center py-8 px-0 lg:px-4 xl:gap-16 sm:py-16 xl:px-2">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
