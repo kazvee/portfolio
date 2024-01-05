@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This is the repo for my portfolio website, which you can visit ✨[HERE](https://kazvee.heliohost.us/)✨
+This is the repo for my portfolio website, which you can visit ✨[HERE](https://kazvee.com/)✨
 
 I built this for some hands-on learning about what Next.js 14 can offer as a full-stack React framework.  
 It's currently been deployed as a static site, but I plan to build out a backend solution using the [App Router](https://nextjs.org/docs/app) method, since it's currently the recommended approach for new applications.
