@@ -1,4 +1,6 @@
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
+import projectRepoIcon from "@/public/images/projects/project-repo-icon.png";
 
 interface ProjectCardProps {
   imgUrl: string;
@@ -19,10 +21,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div>
       <div
         className="group rounded-t-xl h-52 md:h-72 bg-top-left relative overflow-hidden"
-        style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: 'cover' }}>
+        style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: "cover" }}
+      >
         <div className="overlay absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 items-center justify-center">
-          <Link href={gitUrl} target="_blank" rel="noopener noreferrer">
-            Click for Project Details
+          <Link
+            href={gitUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <Image
+              src={projectRepoIcon}
+              alt="Project Repo Icon"
+              className="mr-2"
+            />
+            <span className="text-2xl font-semibold">Visit Repo</span>
           </Link>
         </div>
       </div>
