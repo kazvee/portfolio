@@ -17,6 +17,11 @@ const navLinks = [
     path: '#projects',
     hoverTextColor: 'hover:text-pink-500',
   },
+  {
+    title: 'Stats',
+    path: '#stats',
+    hoverTextColor: 'hover:text-pink-500',
+  },
 ];
 
 const Navbar: React.FC = () => {
