@@ -11,7 +11,7 @@ I've written the project in TypeScript in order to re-familiarize myself with st
 
 I'm enjoying Tailwind's utility-first approach so far. I especially like that I don't need to think of my own CSS class names! 😃
 
-## Screenshots of Current Iteration
+## Screenshots
 
 ![Main View](/public/images/readme/Portfolio_Main_View.png)
 
@@ -28,7 +28,6 @@ I'm enjoying Tailwind's utility-first approach so far. I especially like that I 
 
 * Chickadee photo by [teyi 徐](https://www.pexels.com/photo/black-capped-chickadee-bird-on-a-redcurrant-shrub-19097681/) from [Pexels](https://www.pexels.com/)
 * Icons from [icons8](https://icons8.com/)
-* Web hosting by [HelioHost](https://heliohost.org/)
 
 ## Installation
 
