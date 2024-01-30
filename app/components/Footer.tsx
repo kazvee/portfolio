@@ -2,15 +2,11 @@ import githubIcon from '@/public/images/github-icon.png';
 import linkedinIcon from '@/public/images/linkedin-icon.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import Counter from './Counter';
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer border z-10 border-t-[#B6688A] border-l-transparent border-r-transparent text-pink-500">
       <div className="container p-0 md:p-12 flex justify-between items-center">
-        <span className="flex flex-row">
-          <Counter />
-        </span>
         <span>
           Chickadee photo by{' '}
           <Link
