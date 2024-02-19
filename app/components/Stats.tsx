@@ -12,10 +12,18 @@ const Stats: React.FC = () => {
           <Image
             src='https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-stats.svg'
             alt='GitHub Activity for kazvee'
-            width={500}
-            height={300}
+            width={440}
+            height={456}
           />
         </Link>
+      </div>
+      <div className='flex flex-row justify-center items-center'>
+        <Image
+          src='https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-snake-dark.svg'
+          alt='GitHub Contributions Graph Snake Game for kazvee'
+          width={660}
+          height={144}
+        />
       </div>
     </section>
   );
