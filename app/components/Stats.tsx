@@ -12,8 +12,8 @@ const Stats: React.FC = () => {
           <Image
             src='https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-stats.svg'
             alt='GitHub Activity for kazvee'
-            width={500}
-            height={300}
+            width={440}
+            height={456}
           />
         </Link>
       </div>
