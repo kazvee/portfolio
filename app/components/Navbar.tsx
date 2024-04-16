@@ -1,10 +1,10 @@
 'use client';
+import logoImage from '@/public/images/logo-image.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navlink from './Navlink';
-import MenuOverlay from './MenuOverlay';
-import logoImage from '@/public/images/logo-image.png';
 import { useState } from 'react';
+import MenuOverlay from './MenuOverlay';
+import Navlink from './Navlink';
 
 const navLinks = [
   {
@@ -20,6 +20,11 @@ const navLinks = [
   {
     title: 'Stats',
     path: '#stats',
+    hoverTextColor: 'hover:text-pink-500',
+  },
+  {
+    title: 'Blog',
+    path: 'https://dev.to/kazvee',
     hoverTextColor: 'hover:text-pink-500',
   },
 ];
