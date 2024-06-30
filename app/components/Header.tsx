@@ -1,6 +1,6 @@
+import headerImage from '@/public/images/header-image.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import headerImage from '@/public/images/header-image.png';
 
 const Header: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
             </span>
           </h1>
           <p className="text-[#B6688A] text-base mb-4 sm:text-lg lg:text-xl">
-            Human ~ Global Digital Citizen ~ Lifelong Learner
+            Global Digital Citizen ~ Lifelong Learner
           </p>
           <p className="text-base mb-4 sm:text-lg lg:text-2xl">
             Full Stack Software Developer 👩‍💻
