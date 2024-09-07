@@ -5,42 +5,42 @@ import ProjectTag from './ProjectTag';
 
 const projectsData = [
   {
-    id: 1,
+    id: 9,
     title: '🐾 PawTrackr',
     gitUrl: 'https://github.com/kazvee/PawTrackr/#readme',
     description: 'Full-stack Pet Care Management app (Group Project)',
     tools: '⚙️ React, NodeJS, Express, Axios, Bootstrap, PostgreSQL',
-    image: '/images/projects/project-1.png',
+    image: '/images/projects/project-9.png',
     tag: ['All', 'Full Stack'],
   },
   {
-    id: 2,
+    id: 8,
     title: '🪴 Jungle',
     gitUrl: 'https://github.com/kazvee/jungle_rails/#readme',
     description: 'Full-stack e-commerce Plant Shop',
     tools:
       '⚙️ Ruby on Rails, MVC pattern, Active Record ORM, Bootstrap, PostgreSQL, Bcrypt, Stripe, Rspec, Cypress',
-    image: '/images/projects/project-2.png',
+    image: '/images/projects/project-8.png',
     tag: ['All', 'Full Stack'],
   },
   {
-    id: 3,
+    id: 7,
     title: '📅 Interview Scheduler',
     gitUrl: 'https://github.com/kazvee/scheduler/#readme',
     description: 'Full-stack Meeting Booking app',
     tools:
       '⚙️ React, NodeJS, Axios, Dotenv, Cypress, Jest, TDD (Test Driven Development), SPA (Single Page Application), Railway, CircleCI (CI/CD), Netlify',
-    image: '/images/projects/project-3.png',
+    image: '/images/projects/project-7.png',
     tag: ['All', 'Full Stack'],
   },
   {
-    id: 4,
+    id: 6,
     title: '🖼️ PhotoLabs',
     gitUrl: 'https://github.com/kazvee/photolabs/#readme',
     description: 'Stock Photo browsing app',
     tools:
       '⚙️ React, Express, PostgreSQL, API, Babel, Dotenv, SPA (Single Page Application)',
-    image: '/images/projects/project-4.png',
+    image: '/images/projects/project-6.png',
     tag: ['All'],
   },
   {
@@ -53,51 +53,51 @@ const projectsData = [
     tag: ['All', 'Ruby'],
   },
   {
-    id: 6,
+    id: 4,
     title: '🐦 Tweeter',
     gitUrl: 'https://github.com/kazvee/tweeter/#readme',
     description: 'Single-page Social Media app',
     tools:
       '⚙️ JavaScript, NodeJS, Express, HTML, CSS, SASS, jQuery, AJAX, SPA (Single Page Application)',
-    image: '/images/projects/project-6.png',
+    image: '/images/projects/project-4.png',
     tag: ['All'],
   },
   {
-    id: 7,
+    id: 3,
     title: '📚 Resource Wall (Group Project)',
     gitUrl: 'https://github.com/kazvee/resource-wall/#readme',
     description: 'Full-stack Resource Sharing Site for internet links, blogs, or videos',
     tools: '⚙️ JavaScript, NodeJS, Express, PostgreSQL, CSS, SASS, EJS',
-    image: '/images/projects/project-7.png',
+    image: '/images/projects/project-3.png',
     tag: ['All', 'Full Stack'],
   },
   {
-    id: 8,
+    id: 2,
     title: '🍛 Recipe Rank',
     gitUrl: 'https://github.com/kazvee/recipe-rank/#readme',
     description:
       'Full-stack Recipe Sharing Site enabling users to vote on recipes',
     tools: '⚙️ React, Supabase, Netlify',
-    image: '/images/projects/project-8.png',
+    image: '/images/projects/project-2.png',
     tag: ['All', 'Full Stack'],
   },
   {
-    id: 9,
+    id: 1,
     title: '🐒 Monkey Duck Game',
     gitUrl: 'https://github.com/kazvee/monkey-duck-game/#readme',
     description:
       'Ask the monkeys to shuffle colourful emojis, get ducks in a row, and WIN!',
     tools: '⚙️ React, Surge, SPA (Single Page Application)',
-    image: '/images/projects/project-9.png',
+    image: '/images/projects/project-1.png',
     tag: ['All', 'React'],
   },
 ];
 const Projects: React.FC = () => {
   const [tag, setTag] = useState('All');
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+  const filteredProjects = projectsData
+    .filter((project) => project.tag.includes(tag))
+    .sort((a, b) => b.id - a.id);
 
   const handleTagChange = (newTag: SetStateAction<string>) => {
     setTag(newTag);
