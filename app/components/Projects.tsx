@@ -4,9 +4,64 @@ import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
 
 const projectsData = [
+
+  {
+    id: 14,
+    title: '🐍 Snake Bytes Dinner Planner',
+    liveDemo: 'https://kazvee.pythonanywhere.com/',
+    demoVideo: '/images/demos/Snake_Bytes_Demo_Video.mp4',
+    gitUrl: 'https://github.com/kazvee/snake-bytes/#readme',
+    description: '📅 A revamped Python dinner planner built as a frontend app with Flask',
+    tools: '⚙️ Python 3, Flask, Virtual Environment',
+    image: '/images/projects/project-14.png',
+    tag: ['All',],
+  },
+  {
+    id: 13,
+    title: '💻 Console-based Dinner Planner',
+    demoVideo: '/images/demos/Console_Dinner_Planner_Demo_Video.mp4',
+    gitUrl: 'https://github.com/kazvee/snake-bytes-console/#readme',
+    description: '🍽️ Console app that generates a weekly meal plan based on user input',
+    tools: '⚙️ Python 3',
+    image: '/images/projects/project-13.png',
+    tag: ['All',],
+  },
+  {
+    id: 12,
+    title: '🐰 Bestie Squad',
+    liveDemo: 'https://kazvee.github.io/bestie-squad/',
+    demoVideo: '/images/demos/Bestie_Squad_Demo_Video.mp4',
+    gitUrl: 'https://github.com/kazvee/bestie-squad/#readme',
+    description: '🐰 Redux application that enables users to create and manage a list of their best friends',
+    tools: '⚙️ Redux (Reducers, Actions, Store), React, Yarn',
+    image: '/images/projects/project-12.png',
+    tag: ['All',],
+  },
+  {
+    id: 11,
+    title: '🖼️ Meme Maker',
+    demoVideo: '/images/demos/Meme_Maker_Demo_Video.mp4',
+    gitUrl: 'https://github.com/kazvee/meme-maker/#readme',
+    description: 'Redux application that enables users to create custom memes',
+    tools: '⚙️ Redux (Reducers, Actions, Store), React, Thunk, API, Bootstrap',
+    image: '/images/projects/project-11.png',
+    tag: ['All'],
+  },
+  {
+    id: 10,
+    title: '👩‍💻 Portfolio (this website)',
+    liveDemo: 'https://kazvee.com/',
+    gitUrl: 'https://github.com/kazvee/portfolio/#readme',
+    description: 'Full-stack Web Developer Portfolio Site',
+    tools: '⚙️ Next.js, TypeScript, NodeJS, Tailwind CSS',
+    image: '/images/projects/project-10.png',
+    tag: ['All',],
+  },
   {
     id: 9,
     title: '🐾 PawTrackr',
+    liveDemo: 'https://pawtrackr.netlify.app/',
+    demoVideo: '/images/demos/PawTrackr_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/PawTrackr/#readme',
     description: 'Full-stack Pet Care Management app (Group Project)',
     tools: '⚙️ React, NodeJS, Express, Axios, Bootstrap, PostgreSQL',
@@ -16,6 +71,7 @@ const projectsData = [
   {
     id: 8,
     title: '🪴 Jungle',
+    demoVideo: '/images/demos/Jungle_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/jungle_rails/#readme',
     description: 'Full-stack e-commerce Plant Shop',
     tools:
@@ -26,6 +82,7 @@ const projectsData = [
   {
     id: 7,
     title: '📅 Interview Scheduler',
+    demoVideo: '/images/demos/Interview_Scheduler_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/scheduler/#readme',
     description: 'Full-stack Meeting Booking app',
     tools:
@@ -36,6 +93,7 @@ const projectsData = [
   {
     id: 6,
     title: '🖼️ PhotoLabs',
+    demoVideo: '/images/demos/PhotoLabs_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/photolabs/#readme',
     description: 'Stock Photo browsing app',
     tools:
@@ -55,6 +113,7 @@ const projectsData = [
   {
     id: 4,
     title: '🐦 Tweeter',
+    demoVideo: '/images/demos/Tweeter_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/tweeter/#readme',
     description: 'Single-page Social Media app',
     tools:
@@ -74,6 +133,8 @@ const projectsData = [
   {
     id: 2,
     title: '🍛 Recipe Rank',
+    liveDemo: 'https://kazvee.github.io/recipe-rank/',
+    demoVideo: '/images/demos/Recipe-Rank_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/recipe-rank/#readme',
     description:
       'Full-stack Recipe Sharing Site enabling users to vote on recipes',
@@ -84,6 +145,8 @@ const projectsData = [
   {
     id: 1,
     title: '🐒 Monkey Duck Game',
+    liveDemo: 'https://kazvee.github.io/monkey-duck-game/',
+    demoVideo: '/images/demos/Monkey_Duck_Game_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/monkey-duck-game/#readme',
     description:
       'Ask the monkeys to shuffle colourful emojis, get ducks in a row, and WIN!',
@@ -128,6 +191,8 @@ const Projects: React.FC = () => {
             description={project.description}
             tools={project.tools}
             imgUrl={project.image}
+            liveDemo={project.liveDemo}
+            demoVideo={project.demoVideo}
             gitUrl={project.gitUrl}
           />
         ))}
