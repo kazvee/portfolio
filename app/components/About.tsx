@@ -13,12 +13,12 @@ const TAB_DATA = [
           <li>JavaScript</li>
           <li>TypeScript</li>
           <li>React</li>
-          <li>NextJS</li>
+          <li>Next.js</li>
           <li>Ruby</li>
           <li>HTML</li>
           <li>CSS</li>
           <li>Sass</li>
-          <li>Tailwind</li>
+          <li>Tailwind CSS</li>
         </ul>
       </div>
     ),
@@ -29,8 +29,11 @@ const TAB_DATA = [
     content: (
       <div className="flex justify-center">
         <ul className="list-none text-base lg:text-lg text-left">
-          <li>Node</li>
+          <li>Node.js</li>
           <li>Express</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>Flask</li>
           <li>Rails</li>
           <li>API</li>
         </ul>
