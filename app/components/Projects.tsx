@@ -6,15 +6,25 @@ import ProjectTag from './ProjectTag';
 const projectsData = [
 
   {
+    id: 15,
+    title: '📅 Coffee Calendar Events Scheduler',
+    demoVideo: '/images/demos/Coffee_Calendar_Events_Scheduler_Demo_Video.mp4',
+    gitUrl: 'https://github.com/kazvee/coffee-calendar-events-scheduler/#readme',
+    description: '☕ Console-based planning app that generates an upcoming events schedule based on user input.',
+    tools: '⚙️ Java',
+    image: '/images/projects/project-15.png',
+    tag: ['All', 'Quick Concepts'],
+  },
+  {
     id: 14,
     title: '🐍 Snake Bytes Dinner Planner',
     liveDemo: 'https://kazvee.pythonanywhere.com/',
     demoVideo: '/images/demos/Snake_Bytes_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/snake-bytes/#readme',
-    description: '📅 A revamped Python dinner planner built as a frontend app with Flask',
-    tools: '⚙️ Python 3, Flask, Virtual Environment',
+    description: '🍝 A revamped Python dinner planner built with Flask',
+    tools: '⚙️ Python, Flask, Virtual Environment',
     image: '/images/projects/project-14.png',
-    tag: ['All',],
+    tag: ['All', 'Quick Concepts'],
   },
   {
     id: 13,
@@ -22,9 +32,9 @@ const projectsData = [
     demoVideo: '/images/demos/Console_Dinner_Planner_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/snake-bytes-console/#readme',
     description: '🍽️ Console app that generates a weekly meal plan based on user input',
-    tools: '⚙️ Python 3',
+    tools: '⚙️ Python',
     image: '/images/projects/project-13.png',
-    tag: ['All',],
+    tag: ['All', 'Quick Concepts'],
   },
   {
     id: 12,
@@ -45,7 +55,7 @@ const projectsData = [
     description: 'Redux application that enables users to create custom memes',
     tools: '⚙️ Redux (Reducers, Actions, Store), React, Thunk, API, Bootstrap',
     image: '/images/projects/project-11.png',
-    tag: ['All'],
+    tag: ['All', 'Quick Concepts'],
   },
   {
     id: 10,
@@ -152,7 +162,7 @@ const projectsData = [
       'Ask the monkeys to shuffle colourful emojis, get ducks in a row, and WIN!',
     tools: '⚙️ React, Surge, SPA (Single Page Application)',
     image: '/images/projects/project-1.png',
-    tag: ['All', 'React'],
+    tag: ['All', 'Quick Concepts'],
   },
 ];
 const Projects: React.FC = () => {
@@ -181,6 +191,11 @@ const Projects: React.FC = () => {
           name="Full Stack"
           onClick={handleTagChange}
           isSelected={tag == 'Full Stack'}
+        />
+        <ProjectTag
+          name="Quick Concepts"
+          onClick={handleTagChange}
+          isSelected={tag == 'Quick Concepts'}
         />
       </div>
       <div className="grid md:grid-cols-3 gap-8 md:gap-12">
