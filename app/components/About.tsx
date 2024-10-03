@@ -80,7 +80,24 @@ const About: React.FC = () => {
           </p>
 
           <div className="mt-8 flex flex-col items-center">
-            <div className="flex space-x-8 mb-4">
+            <h2 className="text-3xl font-bold text-white m-4">Skills</h2>
+            <div className="mb-4 md:hidden flex flex-col w-full items-start">
+              {TAB_DATA.map((tab) => (
+                <div key={tab.id} className="w-full mb-4">
+                  <h3 className="text-lg font-bold text-pink-500 mb-1">{tab.title}</h3>
+
+                  <ul className="flex flex-col space-y-1">
+                    {tab.content.map((skill) => (
+                      <li key={skill} className="text-white">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-x-8 mb-4 hidden md:flex">
               {TAB_DATA.map((tab) => (
                 <h3
                   key={tab.id}
@@ -94,7 +111,7 @@ const About: React.FC = () => {
               ))}
             </div>
 
-            <div className="flex flex-col w-1/2 items-start">
+            <div className="flex-col w-1/2 items-start hidden md:flex">
               {TAB_DATA.map((tab) => (
                 <ul
                   key={tab.id}
