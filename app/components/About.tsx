@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const TAB_DATA = [
+const SKILLS_DATA = [
   {
     title: 'Frontend',
     id: 'frontend',
@@ -80,29 +80,45 @@ const About: React.FC = () => {
           </p>
 
           <div className="mt-8 flex flex-col items-center">
-            <div className="flex space-x-8 mb-4">
-              {TAB_DATA.map((tab) => (
+            <h2 className="text-3xl font-bold text-white m-4">Skills</h2>
+            <div className="mb-4 md:hidden flex flex-col w-full items-start">
+              {SKILLS_DATA.map((category) => (
+                <div key={category.id} className="w-full mb-4">
+                  <h3 className="text-lg font-bold text-pink-500 mb-1">{category.title}</h3>
+                  <ul className="flex flex-col space-y-1">
+                    {category.content.map((skill) => (
+                      <li key={skill} className="text-white">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-x-8 mb-4 hidden md:flex">
+              {SKILLS_DATA.map((category) => (
                 <h3
-                  key={tab.id}
-                  className={`text-lg lg:text-xl font-bold transition duration-500 ${hoveredCategory === tab.id
-                    ? 'bg-clip-text text-transparent ' + tab.gradient
+                  key={category.id}
+                  className={`text-lg lg:text-xl font-bold transition duration-500 ${hoveredCategory === category.id
+                    ? 'bg-clip-text text-transparent ' + category.gradient
                     : 'text-pink-500'}`}
-                  onMouseEnter={() => setHoveredCategory(tab.id)}
+                  onMouseEnter={() => setHoveredCategory(category.id)}
                   onMouseLeave={() => setHoveredCategory('')}>
-                  {tab.title}
+                  {category.title}
                 </h3>
               ))}
             </div>
 
-            <div className="flex flex-col w-1/2 items-start">
-              {TAB_DATA.map((tab) => (
+            <div className="flex-col w-1/2 items-start hidden md:flex">
+              {SKILLS_DATA.map((category) => (
                 <ul
-                  key={tab.id}
-                  className={`flex-wrap justify-start space-x-4 transition-colors duration-500 inline-flex p-2 rounded ${hoveredCategory === tab.id ? tab.gradient : ''}`}>
-                  {tab.content.map((skill) => (
+                  key={category.id}
+                  className={`flex-wrap justify-start space-x-4 transition-colors duration-500 inline-flex p-2 rounded ${hoveredCategory === category.id ? category.gradient : ''}`}>
+                  {category.content.map((skill) => (
                     <li
                       key={skill}
-                      className={`transition-colors duration-500 ${hoveredCategory === tab.id ? 'text-black' : 'text-white'} hover:text-pink-500`}>
+                      className={`transition-colors duration-500 ${hoveredCategory === category.id ? 'text-black' : 'text-white'} hover:text-pink-500`}>
                       {skill}
                     </li>
                   ))}
