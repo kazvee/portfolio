@@ -1,74 +1,57 @@
 'use client';
 import Link from 'next/link';
-import TabButton from './TabButton';
-import { SetStateAction, useState, useTransition } from 'react';
+import { useState } from 'react';
 
 const TAB_DATA = [
   {
     title: 'Frontend',
     id: 'frontend',
-    content: (
-      <div className="flex justify-center">
-        <ul className="list-none text-base lg:text-lg text-left">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>Ruby</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Sass</li>
-          <li>Tailwind CSS</li>
-        </ul>
-      </div>
-    ),
+    content: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Ruby',
+      'HTML',
+      'CSS',
+      'Sass',
+      'Tailwind CSS',
+    ],
+    gradient: 'bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500',
   },
   {
     title: 'Backend',
     id: 'backend',
-    content: (
-      <div className="flex justify-center">
-        <ul className="list-none text-base lg:text-lg text-left">
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>Flask</li>
-          <li>Rails</li>
-          <li>API</li>
-        </ul>
-      </div>
-    ),
+    content: [
+      'Node.js',
+      'Express',
+      'Python',
+      'Java',
+      'Flask',
+      'Rails',
+      'API',
+    ],
+    gradient: 'bg-gradient-to-r from-orange-500 via-green-500 to-blue-500',
   },
   {
     title: 'Database & Testing',
     id: 'db-testing',
-    content: (
-      <div className="flex justify-center">
-        <ul className="list-none text-base lg:text-lg text-left">
-          <li>PostgreSQL</li>
-          <li>MongoDB</li>
-          <li>Supabase</li>
-          <li>Cypress</li>
-          <li>Jest</li>
-          <li>Mocha</li>
-          <li>Chai</li>
-          <li>Selenium</li>
-        </ul>
-      </div>
-    ),
+    content: [
+      'PostgreSQL',
+      'MongoDB',
+      'Supabase',
+      'Cypress',
+      'Jest',
+      'Mocha',
+      'Chai',
+      'Selenium',
+    ],
+    gradient: 'bg-gradient-to-r from-teal-500 via-indigo-500 to-purple-500',
   },
 ];
 
 const About: React.FC = () => {
-  const [tab, setTab] = useState('frontend');
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id: SetStateAction<string>) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
+  const [hoveredCategory, setHoveredCategory] = useState('');
 
   return (
     <section className="text-white pt-20" id="about">
@@ -83,7 +66,6 @@ const About: React.FC = () => {
             explore opportunities to contribute to meaningful projects and
             conversations, so please feel free to{' '}
             <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500">
-              {' '}
               reach out to me on{' '}
               <span className="text-blue-500">
                 <Link
@@ -96,31 +78,37 @@ const About: React.FC = () => {
             </span>
             {' '}🙂
           </p>
-          <div className="flex flex-row justify-center lg:text-2xl mt-8">
-            <TabButton
-              selectTab={() => handleTabChange('frontend')}
-              active={tab === 'frontend'}
-              id="frontend">
-              {' '}
-              Frontend{' '}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange('backend')}
-              active={tab === 'backend'}
-              id="backend">
-              {' '}
-              Backend
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange('db-testing')}
-              active={tab === 'db-testing'}
-              id="db-testing">
-              {' '}
-              Database & Testing
-            </TabButton>
-          </div>
-          <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab)?.content}
+
+          <div className="mt-8 flex flex-col items-center">
+            <div className="flex space-x-8 mb-4">
+              {TAB_DATA.map((tab) => (
+                <h3
+                  key={tab.id}
+                  className={`text-lg lg:text-xl font-bold transition duration-500 ${hoveredCategory === tab.id
+                    ? 'bg-clip-text text-transparent ' + tab.gradient
+                    : 'text-pink-500'}`}
+                  onMouseEnter={() => setHoveredCategory(tab.id)}
+                  onMouseLeave={() => setHoveredCategory('')}>
+                  {tab.title}
+                </h3>
+              ))}
+            </div>
+
+            <div className="flex flex-col w-1/2 items-start">
+              {TAB_DATA.map((tab) => (
+                <ul
+                  key={tab.id}
+                  className={`flex-wrap justify-start space-x-4 transition-colors duration-500 inline-flex p-2 rounded ${hoveredCategory === tab.id ? tab.gradient : ''}`}>
+                  {tab.content.map((skill) => (
+                    <li
+                      key={skill}
+                      className={`transition-colors duration-500 ${hoveredCategory === tab.id ? 'text-black' : 'text-white'} hover:text-pink-500`}>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </div>
           </div>
         </div>
       </div>
