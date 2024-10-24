@@ -1,8 +1,10 @@
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import viewCodeIcon from "@/public/images/projects/icon-view-code.png";
 import liveDemoIcon from "@/public/images/projects/icon-live-demo.png";
 import demoVideoIcon from "@/public/images/projects/icon-demo-video.png";
+import Modal from "./Modal";
 
 
 interface ProjectCardProps {
@@ -24,6 +26,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   liveDemo,
   demoVideo
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div>
       <div
@@ -48,10 +55,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </Link>
             )}
             {demoVideo && demoVideo.trim() !== "" && (
-              <Link
-                href={demoVideo}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={openModal}
                 className="flex items-center"
               >
                 <Image
@@ -60,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   className="mr-2 w-16 h-16"
                 />
                 <span className="text-xl font-semibold">Demo Video</span>
-              </Link>
+              </button>
             )}
             <Link
               href={gitUrl}
@@ -83,6 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-[#B6688A]">{description}</p>
         <p className="text-white">{tools}</p>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} videoUrl={demoVideo!} title={title} />
     </div>
   );
 };
