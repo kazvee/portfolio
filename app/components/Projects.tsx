@@ -165,6 +165,7 @@ const projectsData = [
     tag: ['All', 'Quick Concepts'],
   },
 ];
+
 const Projects: React.FC = () => {
   const [tag, setTag] = useState('All');
 
@@ -183,7 +184,7 @@ const Projects: React.FC = () => {
       </h2>
       <div className="flex flex-row justify-center items-center gap-2 text-white my-6">
         <ProjectTag
-          name="All"
+          name="View All"
           onClick={handleTagChange}
           isSelected={tag === 'All'}
         />
