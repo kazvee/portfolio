@@ -84,9 +84,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
       <div className="bg-[#170E1B] rounded-b-xl py-6 px-4 text-white">
-        <h5 className="font-lg font-semibold">{title}</h5>
-        <p className="text-[#B6688A]">{description}</p>
-        <p className="text-white">{tools}</p>
+        <h5 className="text-base md:text-lg font-semibold">{title}</h5>
+        <p className="text-[#B6688A] text-sm md:text-base">{description}</p>
+        <p className="text-white text-sm md:text-base">{tools}</p>
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal} videoUrl={demoVideo!} title={title} />
     </div>
