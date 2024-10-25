@@ -13,7 +13,7 @@ const projectsData = [
     description: '☕ Console-based planning app that generates an upcoming events schedule based on user input.',
     tools: '⚙️ Java',
     image: '/images/projects/project-15.png',
-    tag: ['All', 'Quick Concepts'],
+    tag: ['View All', 'Quick Concepts'],
   },
   {
     id: 14,
@@ -24,7 +24,7 @@ const projectsData = [
     description: '🍝 A revamped Python dinner planner built with Flask',
     tools: '⚙️ Python, Flask, Virtual Environment',
     image: '/images/projects/project-14.png',
-    tag: ['All', 'Quick Concepts'],
+    tag: ['View All', 'Quick Concepts'],
   },
   {
     id: 13,
@@ -34,7 +34,7 @@ const projectsData = [
     description: '🍽️ Console app that generates a weekly meal plan based on user input',
     tools: '⚙️ Python',
     image: '/images/projects/project-13.png',
-    tag: ['All', 'Quick Concepts'],
+    tag: ['View All', 'Quick Concepts'],
   },
   {
     id: 12,
@@ -45,7 +45,7 @@ const projectsData = [
     description: '🐰 Redux application that enables users to create and manage a list of their best friends',
     tools: '⚙️ Redux (Reducers, Actions, Store), React, Yarn',
     image: '/images/projects/project-12.png',
-    tag: ['All',],
+    tag: ['View All',],
   },
   {
     id: 11,
@@ -55,7 +55,7 @@ const projectsData = [
     description: 'Redux application that enables users to create custom memes',
     tools: '⚙️ Redux (Reducers, Actions, Store), React, Thunk, API, Bootstrap',
     image: '/images/projects/project-11.png',
-    tag: ['All', 'Quick Concepts'],
+    tag: ['View All', 'Quick Concepts'],
   },
   {
     id: 10,
@@ -65,7 +65,7 @@ const projectsData = [
     description: 'Full-stack Web Developer Portfolio Site',
     tools: '⚙️ Next.js, TypeScript, NodeJS, Tailwind CSS',
     image: '/images/projects/project-10.png',
-    tag: ['All',],
+    tag: ['View All',],
   },
   {
     id: 9,
@@ -76,7 +76,7 @@ const projectsData = [
     description: 'Full-stack Pet Care Management app (Group Project)',
     tools: '⚙️ React, NodeJS, Express, Axios, Bootstrap, PostgreSQL',
     image: '/images/projects/project-9.png',
-    tag: ['All', 'Full Stack'],
+    tag: ['View All', 'Full Stack'],
   },
   {
     id: 8,
@@ -87,7 +87,7 @@ const projectsData = [
     tools:
       '⚙️ Ruby on Rails, MVC pattern, Active Record ORM, Bootstrap, PostgreSQL, Bcrypt, Stripe, Rspec, Cypress',
     image: '/images/projects/project-8.png',
-    tag: ['All', 'Full Stack'],
+    tag: ['View All', 'Full Stack'],
   },
   {
     id: 7,
@@ -98,7 +98,7 @@ const projectsData = [
     tools:
       '⚙️ React, NodeJS, Axios, Dotenv, Cypress, Jest, TDD (Test Driven Development), SPA (Single Page Application), Railway, CircleCI (CI/CD), Netlify',
     image: '/images/projects/project-7.png',
-    tag: ['All', 'Full Stack'],
+    tag: ['View All', 'Full Stack'],
   },
   {
     id: 6,
@@ -109,7 +109,7 @@ const projectsData = [
     tools:
       '⚙️ React, Express, PostgreSQL, API, Babel, Dotenv, SPA (Single Page Application)',
     image: '/images/projects/project-6.png',
-    tag: ['All'],
+    tag: ['View All'],
   },
   {
     id: 5,
@@ -118,7 +118,7 @@ const projectsData = [
     description: 'Terminal based Math Game',
     tools: '⚙️ Ruby, OOP (Object Oriented Programming)',
     image: '/images/projects/project-5.png',
-    tag: ['All', 'Ruby'],
+    tag: ['View All', 'Ruby'],
   },
   {
     id: 4,
@@ -129,7 +129,7 @@ const projectsData = [
     tools:
       '⚙️ JavaScript, NodeJS, Express, HTML, CSS, SASS, jQuery, AJAX, SPA (Single Page Application)',
     image: '/images/projects/project-4.png',
-    tag: ['All'],
+    tag: ['View All'],
   },
   {
     id: 3,
@@ -138,7 +138,7 @@ const projectsData = [
     description: 'Full-stack Resource Sharing Site for internet links, blogs, or videos',
     tools: '⚙️ JavaScript, NodeJS, Express, PostgreSQL, CSS, SASS, EJS',
     image: '/images/projects/project-3.png',
-    tag: ['All', 'Full Stack'],
+    tag: ['View All', 'Full Stack'],
   },
   {
     id: 2,
@@ -150,7 +150,7 @@ const projectsData = [
       'Full-stack Recipe Sharing Site enabling users to vote on recipes',
     tools: '⚙️ React, Supabase, Netlify',
     image: '/images/projects/project-2.png',
-    tag: ['All', 'Full Stack'],
+    tag: ['View All', 'Full Stack'],
   },
   {
     id: 1,
@@ -162,11 +162,12 @@ const projectsData = [
       'Ask the monkeys to shuffle colourful emojis, get ducks in a row, and WIN!',
     tools: '⚙️ React, Surge, SPA (Single Page Application)',
     image: '/images/projects/project-1.png',
-    tag: ['All', 'Quick Concepts'],
+    tag: ['View All', 'Quick Concepts'],
   },
 ];
+
 const Projects: React.FC = () => {
-  const [tag, setTag] = useState('All');
+  const [tag, setTag] = useState('View All');
 
   const filteredProjects = projectsData
     .filter((project) => project.tag.includes(tag))
@@ -183,9 +184,9 @@ const Projects: React.FC = () => {
       </h2>
       <div className="flex flex-row justify-center items-center gap-2 text-white my-6">
         <ProjectTag
-          name="All"
+          name="View All"
           onClick={handleTagChange}
-          isSelected={tag === 'All'}
+          isSelected={tag === 'View All'}
         />
         <ProjectTag
           name="Full Stack"

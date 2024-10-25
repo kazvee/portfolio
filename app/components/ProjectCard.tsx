@@ -49,9 +49,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Image
                   src={liveDemoIcon}
                   alt="Live Demo Icon"
-                  className="mr-2 w-16 h-16"
+                  className="mr-2 w-12 h-12 md:w-16 md:h-16"
                 />
-                <span className="text-xl font-semibold">Live Demo</span>
+                <span className="text-base md:text-xl font-semibold">Live Demo</span>
               </Link>
             )}
             {demoVideo && demoVideo.trim() !== "" && (
@@ -62,9 +62,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Image
                   src={demoVideoIcon}
                   alt="Demo Icon"
-                  className="mr-2 w-16 h-16"
+                  className="mr-2 w-12 h-12 md:w-16 md:h-16"
                 />
-                <span className="text-xl font-semibold">Demo Video</span>
+                <span className="text-base md:text-xl font-semibold">Demo Video</span>
               </button>
             )}
             <Link
@@ -76,17 +76,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Image
                 src={viewCodeIcon}
                 alt="Project Repo Icon"
-                className="mr-2 w-16 h-16"
+                className="mr-2 w-12 h-12 md:w-16 md:h-16"
               />
-              <span className="text-xl font-semibold">View Code</span>
+              <span className="text-base md:text-xl font-semibold">View Code</span>
             </Link>
           </div>
         </div>
       </div>
       <div className="bg-[#170E1B] rounded-b-xl py-6 px-4 text-white">
-        <h5 className="font-lg font-semibold">{title}</h5>
-        <p className="text-[#B6688A]">{description}</p>
-        <p className="text-white">{tools}</p>
+        <h5 className="text-base md:text-lg font-semibold">{title}</h5>
+        <p className="text-[#B6688A] text-sm md:text-base">{description}</p>
+        <p className="text-white text-sm md:text-base">{tools}</p>
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal} videoUrl={demoVideo!} title={title} />
     </div>
