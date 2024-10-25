@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Image
                   src={liveDemoIcon}
                   alt="Live Demo Icon"
-                  className="mr-2 w-16 h-16"
+                  className="mr-2 w-12 h-12 md:w-16 md:h-16"
                 />
                 <span className="text-xl font-semibold">Live Demo</span>
               </Link>
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Image
                   src={demoVideoIcon}
                   alt="Demo Icon"
-                  className="mr-2 w-16 h-16"
+                  className="mr-2 w-12 h-12 md:w-16 md:h-16"
                 />
                 <span className="text-xl font-semibold">Demo Video</span>
               </button>
@@ -76,7 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Image
                 src={viewCodeIcon}
                 alt="Project Repo Icon"
-                className="mr-2 w-16 h-16"
+                className="mr-2 w-12 h-12 md:w-16 md:h-16"
               />
               <span className="text-xl font-semibold">View Code</span>
             </Link>
