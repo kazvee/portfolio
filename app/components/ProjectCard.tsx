@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   alt="Live Demo Icon"
                   className="mr-2 w-12 h-12 md:w-16 md:h-16"
                 />
-                <span className="text-xl font-semibold">Live Demo</span>
+                <span className="text-base md:text-xl font-semibold">Live Demo</span>
               </Link>
             )}
             {demoVideo && demoVideo.trim() !== "" && (
@@ -64,7 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   alt="Demo Icon"
                   className="mr-2 w-12 h-12 md:w-16 md:h-16"
                 />
-                <span className="text-xl font-semibold">Demo Video</span>
+                <span className="text-base md:text-xl font-semibold">Demo Video</span>
               </button>
             )}
             <Link
@@ -78,7 +78,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 alt="Project Repo Icon"
                 className="mr-2 w-12 h-12 md:w-16 md:h-16"
               />
-              <span className="text-xl font-semibold">View Code</span>
+              <span className="text-base md:text-xl font-semibold">View Code</span>
             </Link>
           </div>
         </div>
