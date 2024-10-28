@@ -2,6 +2,7 @@
 import { SetStateAction, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
+import Link from 'next/link';
 
 const projectsData = [
 
@@ -11,7 +12,7 @@ const projectsData = [
     demoVideo: '/images/demos/Coffee_Calendar_Events_Scheduler_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/coffee-calendar-events-scheduler/#readme',
     description: '☕ Console-based planning app that generates an upcoming events schedule based on user input.',
-    tools: '⚙️ Java',
+    tools: '⚙️ Java, CLI (Command Line Interface)',
     image: '/images/projects/project-15.png',
     tag: ['View All', 'Quick Concepts'],
   },
@@ -32,7 +33,7 @@ const projectsData = [
     demoVideo: '/images/demos/Console_Dinner_Planner_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/snake-bytes-console/#readme',
     description: '🍽️ Console app that generates a weekly meal plan based on user input',
-    tools: '⚙️ Python',
+    tools: '⚙️ Python, CLI (Command Line Interface)',
     image: '/images/projects/project-13.png',
     tag: ['View All', 'Quick Concepts'],
   },
@@ -43,7 +44,7 @@ const projectsData = [
     demoVideo: '/images/demos/Bestie_Squad_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/bestie-squad/#readme',
     description: '🐰 Redux application that enables users to create and manage a list of their best friends',
-    tools: '⚙️ Redux (Reducers, Actions, Store), React, Yarn',
+    tools: '⚙️ Redux (Reducers, Actions, Store), JavaScript, React, Yarn, GitHub Pages',
     image: '/images/projects/project-12.png',
     tag: ['View All',],
   },
@@ -53,7 +54,7 @@ const projectsData = [
     demoVideo: '/images/demos/Meme_Maker_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/meme-maker/#readme',
     description: 'Redux application that enables users to create custom memes',
-    tools: '⚙️ Redux (Reducers, Actions, Store), React, Thunk, API, Bootstrap',
+    tools: '⚙️ Redux (Reducers, Actions, Store), JavaScript, React, Thunk, API, Bootstrap',
     image: '/images/projects/project-11.png',
     tag: ['View All', 'Quick Concepts'],
   },
@@ -63,7 +64,7 @@ const projectsData = [
     liveDemo: 'https://kazvee.com/',
     gitUrl: 'https://github.com/kazvee/portfolio/#readme',
     description: 'Full-stack Web Developer Portfolio Site',
-    tools: '⚙️ Next.js, TypeScript, NodeJS, Tailwind CSS',
+    tools: '⚙️ Next.js, JavaScript, TypeScript, NodeJS, Tailwind CSS',
     image: '/images/projects/project-10.png',
     tag: ['View All',],
   },
@@ -74,7 +75,7 @@ const projectsData = [
     demoVideo: '/images/demos/PawTrackr_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/PawTrackr/#readme',
     description: 'Full-stack Pet Care Management app (Group Project)',
-    tools: '⚙️ React, NodeJS, Express, Axios, Bootstrap, PostgreSQL',
+    tools: '⚙️ React, JavaScript, NodeJS, Express, Axios, Bootstrap, PostgreSQL, Netlify',
     image: '/images/projects/project-9.png',
     tag: ['View All', 'Full Stack'],
   },
@@ -96,7 +97,7 @@ const projectsData = [
     gitUrl: 'https://github.com/kazvee/scheduler/#readme',
     description: 'Full-stack Meeting Booking app',
     tools:
-      '⚙️ React, NodeJS, Axios, Dotenv, Cypress, Jest, TDD (Test Driven Development), SPA (Single Page Application), Railway, CircleCI (CI/CD), Netlify',
+      '⚙️ React, JavaScript, NodeJS, Axios, Dotenv, Cypress, Jest, TDD (Test Driven Development), SPA (Single Page Application), Railway, CircleCI (CI/CD), Netlify',
     image: '/images/projects/project-7.png',
     tag: ['View All', 'Full Stack'],
   },
@@ -107,7 +108,7 @@ const projectsData = [
     gitUrl: 'https://github.com/kazvee/photolabs/#readme',
     description: 'Stock Photo browsing app',
     tools:
-      '⚙️ React, Express, PostgreSQL, API, Babel, Dotenv, SPA (Single Page Application)',
+      '⚙️ React, JavaScript, Express, PostgreSQL, API, Babel, Dotenv, SPA (Single Page Application)',
     image: '/images/projects/project-6.png',
     tag: ['View All'],
   },
@@ -116,7 +117,7 @@ const projectsData = [
     title: '🧮 Two Player Math Game',
     gitUrl: 'https://github.com/kazvee/two_player_game/#readme',
     description: 'Terminal based Math Game',
-    tools: '⚙️ Ruby, OOP (Object Oriented Programming)',
+    tools: '⚙️ Ruby, OOP (Object Oriented Programming), CLI (Command Line Interface)',
     image: '/images/projects/project-5.png',
     tag: ['View All', 'Ruby'],
   },
@@ -148,7 +149,7 @@ const projectsData = [
     gitUrl: 'https://github.com/kazvee/recipe-rank/#readme',
     description:
       'Full-stack Recipe Sharing Site enabling users to vote on recipes',
-    tools: '⚙️ React, Supabase, Netlify',
+    tools: '⚙️ React, JavaScript, Supabase, GitHub Pages (Previously Netlify)',
     image: '/images/projects/project-2.png',
     tag: ['View All', 'Full Stack'],
   },
@@ -160,7 +161,7 @@ const projectsData = [
     gitUrl: 'https://github.com/kazvee/monkey-duck-game/#readme',
     description:
       'Ask the monkeys to shuffle colourful emojis, get ducks in a row, and WIN!',
-    tools: '⚙️ React, Surge, SPA (Single Page Application)',
+    tools: '⚙️ React, JavaScript, GitHub Pages (Previously Surge), SPA (Single Page Application)',
     image: '/images/projects/project-1.png',
     tag: ['View All', 'Quick Concepts'],
   },
@@ -182,6 +183,16 @@ const Projects: React.FC = () => {
       <h2 className="text-center text-4xl font-bold text-white mb-4">
         My Projects
       </h2>
+      <p className="text-[#B6688A] text-center text-sm md:text-base">
+        Some of my favourite projects are highlighted below. If you&apos;d like to see more, take a peek at my {' '}
+        <Link
+          className="text-white hover:text-pink-500 hover:underline"
+          href="https://github.com/kazvee?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </Link>{' '}account!</p>
       <div className="flex flex-row justify-center items-center gap-2 text-white my-6">
         <ProjectTag
           name="View All"
