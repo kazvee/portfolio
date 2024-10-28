@@ -103,7 +103,7 @@ const projectsData = [
   {
     id: 6,
     title: '🖼️ PhotoLabs',
-    demoVideo: '/images/demos/PhotoLabs_Demo_Video.mp4',
+    demoVideo: '/images/demos/PhotoLabs_Demo_Video.webm',
     gitUrl: 'https://github.com/kazvee/photolabs/#readme',
     description: 'Stock Photo browsing app',
     tools:
