@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const Stats: React.FC = () => {
   return (
-    <section className='pt-36' id='stats'>
-      <h2 className='text-center text-4xl font-bold text-white mb-8 pt-108 md:mb-12'>
+    <section className='pt-2 md:pt-10' id='stats'>
+      <h2 className='text-center text-4xl font-bold text-white mb-4'>
         My GitHub Stats
       </h2>
-      <div className='flex flex-row justify-center items-center gap-2 text-white my-6'>
+      <div className='flex flex-row justify-center items-center gap-2 text-white my-2'>
         <Link href='https://github.com/kazvee#-at-a-glance'>
           <Image
             src='https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-stats.svg'

@@ -178,8 +178,8 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="pt-36" id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mb-8 pt-108 md:mb-12">
+    <section className="pt-2 md:pt-10" id="projects">
+      <h2 className="text-center text-4xl font-bold text-white mb-4">
         My Projects
       </h2>
       <div className="flex flex-row justify-center items-center gap-2 text-white my-6">
