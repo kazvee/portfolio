@@ -32,10 +32,15 @@ const navLinks = [
 const Navbar: React.FC = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
+  const handleLogoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <nav className="fixed mx-auto border border-[#482B56] top-0 left-0 right-0 z-10 bg-[#170E1B] bg-opacity-100">
+    <nav className="fixed mx-auto border-b border-[#482B56] top-0 left-0 right-0 z-10 bg-[#170E1B] bg-opacity-100">
       <div className="flex items-center justify-between mx-auto px-4 py-2">
-        <Link href="/" className="container mx-auto px-2 py-4">
+        <Link href="/" onClick={handleLogoClick} className="container mx-auto px-2 py-4">
           <Image
             src={logoImage}
             alt="logo of woman and a laptop displaying code on the screen"
