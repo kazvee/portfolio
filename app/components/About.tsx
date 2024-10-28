@@ -65,17 +65,14 @@ const About: React.FC = () => {
             resilience gained through an established work ethic. I would love to
             explore opportunities to contribute to meaningful projects and
             conversations, so please feel free to{' '}
-            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500">
+            <Link
+              href="https://www.linkedin.com/in/kazvee/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500">
               reach out to me on{' '}
-              <span className="text-blue-500">
-                <Link
-                  href="https://www.linkedin.com/in/kazvee/"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  LinkedIn
-                </Link>
-              </span>
-            </span>
+              <span className="text-blue-500">LinkedIn</span>
+            </Link>
             {' '}🙂
           </p>
 
