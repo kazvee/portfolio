@@ -54,8 +54,8 @@ const About: React.FC = () => {
   const [hoveredCategory, setHoveredCategory] = useState('');
 
   return (
-    <section className="text-white pt-20" id="about">
-      <div className="md:grid md:grid-cols-1 gap-8 items-center py-8 px-0 lg:px-4 xl:gap-16 sm:py-16 xl:px-2">
+    <section className="text-white pt-2" id="about">
+      <div className="md:grid md:grid-cols-1 gap-8 items-center">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-xl">

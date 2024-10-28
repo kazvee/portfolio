@@ -14,3 +14,13 @@ body {
       var(--background-start-hex),
       var(--background-end-hex));
 }
+
+#about,
+#projects,
+#stats {
+  scroll-margin-top: 120px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
