@@ -45,6 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"
+                aria-label={`View live demo for ${title}`}
               >
                 <Image
                   src={liveDemoIcon}
@@ -58,6 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <button
                 onClick={openModal}
                 className="flex items-center"
+                aria-label={`View demo video for ${title}`}
               >
                 <Image
                   src={demoVideoIcon}
@@ -72,6 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"
+              aria-label={`View GitHub repository for ${title}`}
             >
               <Image
                 src={viewCodeIcon}
