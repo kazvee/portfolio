@@ -174,7 +174,7 @@ const Projects: React.FC = () => {
     .filter((project) => project.tag.includes(tag))
     .sort((a, b) => b.id - a.id);
 
-  const handleTagChange = (newTag: SetStateAction<string>) => {
+  const handleTagChange = (newTag: string) => {
     setTag(newTag);
   };
 
@@ -210,8 +210,8 @@ const Projects: React.FC = () => {
           isSelected={tag == 'Quick Concepts'}
         />
       </div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+      <div role="region" aria-labelledby="projects-header" className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
             title={project.title}

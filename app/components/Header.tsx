@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <section className="mt-20">
+    <header className="mt-20">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-extrabold">
@@ -24,6 +24,7 @@ const Header: React.FC = () => {
               href="https://www.linkedin.com/in/kazvee/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Connect with me on LinkedIn"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full text-white mt-3">
               <span className="block bg-gradient-to-br from-pink-900 to-pink-700 hover:from-pink-700 hover:to-pink-900 rounded-full px-5 py-2">
                 Connect with me on LinkedIn
@@ -33,6 +34,7 @@ const Header: React.FC = () => {
               href="https://github.com/kazvee/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit my GitHub page"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full text-white mt-3">
               <span className="block bg-gradient-to-br from-pink-900 to-pink-700 hover:from-pink-700 hover:to-pink-900 rounded-full px-5 py-2">
                 Visit my GitHub page
@@ -44,14 +46,14 @@ const Header: React.FC = () => {
           <div className="rounded-full bg-pink-900 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative flex items-center justify-center">
             <Image
               src={headerImage}
-              alt="black-capped chickadee bird sitting on a redcurrant shrub"
+              alt="A black-capped chickadee bird sitting on a redcurrant shrub"
               className="w-[95%] h-auto border-4 border-pink-900 rounded-full"
               priority={true}
             />
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 

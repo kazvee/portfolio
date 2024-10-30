@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
             href="https://www.pexels.com/photo/black-capped-chickadee-bird-on-a-redcurrant-shrub-19097681/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit the photo of a black-capped chickadee by teyi 徐 on Pexels"
           >
             teyi 徐
           </Link>
@@ -25,6 +26,7 @@ const Footer: React.FC = () => {
             href="https://icons8.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Icons8 for icons"
           >
             icons8
           </Link>
@@ -34,15 +36,17 @@ const Footer: React.FC = () => {
             href="https://www.linkedin.com/in/kazvee/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit my LinkedIn profile"
           >
-            <Image src={linkedinIcon} alt="LinkedIn icon" />
+            <Image src={linkedinIcon} alt="LinkedIn logo linking to my profile" />
           </Link>
           <Link
             href="https://github.com/kazvee/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit my GitHub profile"
           >
-            <Image src={githubIcon} alt="GitHub icon" />
+            <Image src={githubIcon} alt="GitHub logo linking to my profile" />
           </Link>
         </span>
       </div>
