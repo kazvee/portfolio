@@ -174,7 +174,7 @@ const Projects: React.FC = () => {
     .filter((project) => project.tag.includes(tag))
     .sort((a, b) => b.id - a.id);
 
-  const handleTagChange = (newTag: SetStateAction<string>) => {
+  const handleTagChange = (newTag: string) => {
     setTag(newTag);
   };
 
