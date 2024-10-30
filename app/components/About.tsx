@@ -72,6 +72,7 @@ const About: React.FC = () => {
               href="https://www.linkedin.com/in/kazvee/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Connect with me on LinkedIn"
               className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500">
               reach out to me on{' '}
               <span className="text-blue-500">LinkedIn</span>
