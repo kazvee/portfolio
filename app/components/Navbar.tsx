@@ -38,12 +38,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed mx-auto border-b border-[#482B56] top-0 left-0 right-0 z-10 bg-[#170E1B] bg-opacity-100">
+    <nav className="fixed mx-auto border-b border-[#482B56] top-0 left-0 right-0 z-10 bg-[#170E1B] bg-opacity-100" role="navigation">
       <div className="flex items-center justify-between mx-auto px-4 py-2">
         <Link href="/" onClick={handleLogoClick} className="container mx-auto px-2 py-4">
           <Image
             src={logoImage}
-            alt="logo of woman and a laptop displaying code on the screen"
+            alt="Return to Home - Logo of a woman and a laptop displaying code"
             width={60}
             height={60}
           />
@@ -52,12 +52,15 @@ const Navbar: React.FC = () => {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
+              aria-expanded={navbarOpen}
+              aria-label="Open mobile navigation menu"
               className="flex items-center px-3 py-2 border rounded border-purple-500 hover:border-pink-500">
               <span>🟰</span>
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
+              aria-label="Close mobile navigation menu"
               className="flex items-center px-3 py-2 border rounded border-purple-500 hover:border-pink-500">
               <span>✖️</span>
             </button>
@@ -77,7 +80,7 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} closeOverlay={() => setNavbarOpen(false)} /> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} role="menu" closeOverlay={() => setNavbarOpen(false)} /> : null}
     </nav>
   );
 };
