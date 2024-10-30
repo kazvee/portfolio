@@ -8,10 +8,13 @@ const Stats: React.FC = () => {
         My GitHub Stats
       </h2>
       <div className='flex flex-row justify-center items-center gap-2 text-white my-2'>
-        <Link href='https://github.com/kazvee#-at-a-glance'>
+        <Link
+          href='https://github.com/kazvee#-at-a-glance'
+          aria-label="View my GitHub activity stats"
+        >
           <Image
             src='https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-stats.svg'
-            alt='GitHub Activity for kazvee'
+            alt='My GitHub activity stats'
             width={440}
             height={456}
           />
@@ -20,7 +23,7 @@ const Stats: React.FC = () => {
       <div className='flex flex-row justify-center items-center'>
         <Image
           src='https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-snake-dark.svg'
-          alt='GitHub Contributions Graph Snake Game for kazvee'
+          alt='My GitHub Contributions Graph as a Snake Game'
           width={660}
           height={144}
         />
