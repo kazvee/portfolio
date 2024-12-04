@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed mx-auto border-b border-[#482B56] top-0 left-0 right-0 z-10 bg-[#170E1B] bg-opacity-100" role="navigation">
       <div className="flex items-center justify-between mx-auto px-4 py-2">
-        <Link href="/" onClick={handleLogoClick} className="container mx-auto px-2 py-4">
+        <Link href="/" onClick={handleLogoClick} className="px-2 py-4">
           <Image
             src={logoImage}
             alt="Return to Home - Logo of a woman and a laptop displaying code"
