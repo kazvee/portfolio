@@ -27,6 +27,11 @@ const navLinks = [
     path: 'https://dev.to/kazvee',
     hoverTextColor: 'hover:text-pink-500',
   },
+  {
+    title: 'Contact',
+    path: '#contact',
+    hoverTextColor: 'hover:text-pink-500',
+  },
 ];
 
 const Navbar: React.FC = () => {
