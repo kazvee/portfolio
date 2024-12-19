@@ -24,3 +24,29 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.snowflake {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: fall 10s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .snowflake {
+    display: none;
+  }
+}
