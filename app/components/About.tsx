@@ -108,7 +108,7 @@ const About: React.FC = () => {
               ))}
             </div>
 
-            <div className="flex-col w-1/2 items-start hidden md:flex">
+            <div className="flex-col w-2/3 items-center hidden md:flex">
               {SKILLS_DATA.map((category) => (
                 <ul
                   key={category.id}
