@@ -24,7 +24,7 @@ const navLinks = [
   },
   {
     title: 'Blog',
-    path: 'https://dev.to/kazvee',
+    path: '#blog',
     hoverTextColor: 'hover:text-pink-500',
   },
   {
