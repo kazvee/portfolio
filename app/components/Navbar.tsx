@@ -39,6 +39,7 @@ const Navbar: React.FC = () => {
 
   const handleLogoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
+    window.history.replaceState({}, '', '/');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
