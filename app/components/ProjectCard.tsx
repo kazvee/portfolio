@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div>
+    <div className="border border-pink-500 rounded-xl flex flex-col max-h-[500px]">
       <div
         className="group rounded-t-xl h-52 md:h-72 bg-top-left relative overflow-hidden"
         style={{ backgroundImage: `url(${imgUrl})`, backgroundSize: "cover" }}
@@ -86,7 +86,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
       </div>
-      <div className="bg-[#170E1B] rounded-b-xl py-6 px-4 text-white">
+      <div className="bg-[#170E1B] rounded-b-xl py-6 px-4 text-white flex-grow">
         <span className="text-base md:text-lg font-semibold">{title}</span>
         <p className="text-[#B6688A] text-sm md:text-base">{description}</p>
         <p className="text-white text-sm md:text-base">{tools}</p>
