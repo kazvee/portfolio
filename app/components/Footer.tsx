@@ -1,9 +1,22 @@
+'use client';
+import { useState } from 'react';
 import githubIcon from '@/public/images/github-icon.png';
 import linkedinIcon from '@/public/images/linkedin-icon.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import PrivacyPolicyModal from './PrivacyPolicyModal';
 
 const Footer: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <footer className="footer border z-10 border-t-[#B6688A] border-l-transparent border-r-transparent text-pink-500">
       <div className="container p-0 md:p-12 flex justify-between items-center">
@@ -31,6 +44,15 @@ const Footer: React.FC = () => {
             icons8
           </Link>
         </span>
+        <span>
+          <button
+            className="text-white font-bold cursor-pointer"
+            onClick={openModal}
+            aria-label="View Privacy Policy"
+          >
+            Privacy Policy
+          </button>
+        </span>
         <span className="flex flex-row">
           <Link
             href="https://www.linkedin.com/in/kazvee/"
@@ -50,6 +72,7 @@ const Footer: React.FC = () => {
           </Link>
         </span>
       </div>
+      <PrivacyPolicyModal isOpen={isModalOpen} onClose={closeModal} />
     </footer>
   );
 };
