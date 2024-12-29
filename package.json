@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@hcaptcha/react-hcaptcha": "^1.11.0",
     "next": "^14.2.8",
     "react": "^18",
     "react-dom": "^18"
