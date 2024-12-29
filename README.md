@@ -1,21 +1,18 @@
 # 👩‍💻 Portfolio
 
-## Purpose
-
 This is the repo for my portfolio website, which you can visit ✨[HERE](https://kazvee.com/)✨
-
-I built this for some hands-on learning about what Next.js 14 can offer as a full-stack React framework.  
-It's currently been deployed as a static site, but I plan to build out a backend solution using the [App Router](https://nextjs.org/docs/app) method, since it's currently the recommended approach for new applications.
-
-I've written the project in TypeScript in order to re-familiarize myself with static typing in JavaScript since I haven't used TS in a while.
-
-I'm enjoying Tailwind's utility-first approach so far. I especially like that I don't need to think of my own CSS class names! 😃
 
 ## Screenshots
 
 ![Main View](/public/images/readme/Portfolio_Main_View.png)
 
 ![Projects View](/public/images/readme/Projects_View.png)
+
+## Demo Video
+
+Featuring some winter snowfall ❄️
+
+https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 
 ## Built With
 
@@ -36,7 +33,7 @@ I'm enjoying Tailwind's utility-first approach so far. I especially like that I 
 
 ### Start the Development Server
 * Run `npm run dev`
-* The development app will be served at [http://localhost:3000/](http://localhost:3000/)
+* The development app will be served at [http://localhost:3000](http://localhost:3000/)
 
 ### Linting
 * To check your code for potential errors, stylistic issues, or other problems, run `npm run lint`
@@ -47,4 +44,4 @@ I'm enjoying Tailwind's utility-first approach so far. I especially like that I 
 
 #### Start the Production Server
 * Run `npx serve@latest out`
-* The production app will be served at [http://localhost:3000/](http://localhost:3000/)
+* The production app will be served at [http://localhost:3000](http://localhost:3000/)
