@@ -1,6 +1,8 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
+import mapleLeafIcon from '@/public/images/maple-leaf-icon.png';
 
 const SKILLS_DATA = [
   {
@@ -55,14 +57,38 @@ const SKILLS_DATA = [
 
 const About: React.FC = () => {
   const [hoveredCategory, setHoveredCategory] = useState('');
+  const [iconSpinning, setIconSpinning] = useState(false);
 
+  const handleIconClick = () => {
+    setIconSpinning(true);
+    setTimeout(() => {
+      setIconSpinning(false);
+    }, 3000);
+  };
+  
   return (
     <section className="text-white pt-2" id="about">
       <div className="md:grid md:grid-cols-1 gap-8 items-center">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4 flex items-center">
+            About Me
+            <span className="ml-2 flex items-center">
+              <Image
+                src={mapleLeafIcon}
+                alt="Maple Leaf icon"
+                width={48}
+                height={48}
+                className={`maple-leaf ${iconSpinning ? 'spin' : ''}`}
+                onClick={handleIconClick}
+                style={{ transformOrigin: 'center', cursor: 'pointer' }} />
+            </span>
+            <span
+              className={`text-xs font-normal text-pink-300 ${iconSpinning ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+              wheeeeeeee
+            </span>
+          </h2>
           <p className="text-base lg:text-xl">
-            I am a full stack web developer with a background in telecoms and technical support. Friendly and collaborative, I enjoy overcoming challenges with a combination of cheerful determination, grit, and resilience gained through an established work ethic. I would love to explore opportunities to contribute to meaningful projects and conversations, so please feel free to{' '}
+            Based in <span className="text-pink-500">Canada</span>, I&apos;m an experienced technologist with a background in software development, technical writing, and customer-focused technical support. Friendly and collaborative, I enjoy overcoming challenges with a combination of cheerful determination, grit, and resilience gained through an established work ethic. I&apos;d love to explore opportunities to contribute to meaningful projects and conversations, so please feel free to{' '}
             <Link
               href="https://www.linkedin.com/in/kazvee/"
               target="_blank"

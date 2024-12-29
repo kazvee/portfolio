@@ -56,3 +56,27 @@ html {
     display: none;
   }
 }
+
+@keyframes spinDiagonalReverse {
+  0% {
+    transform: rotate3d(1, -1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, -1, 0, 2880deg); /* 8 full rotations */
+  }
+}
+
+.maple-leaf.spin {
+  animation: spinDiagonalReverse 3s ease-out forwards;
+  transform-style: preserve-3d;
+}
+
+.maple-leaf-container {
+  perspective: 1000px;
+}
+
+.wheeee {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
