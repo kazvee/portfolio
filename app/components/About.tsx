@@ -57,15 +57,34 @@ const SKILLS_DATA = [
 
 const About: React.FC = () => {
   const [hoveredCategory, setHoveredCategory] = useState('');
+  const [iconSpinning, setIconSpinning] = useState(false);
 
+  const handleIconClick = () => {
+    setIconSpinning(true);
+    setTimeout(() => {
+      setIconSpinning(false);
+    }, 3000);
+  };
+  
   return (
     <section className="text-white pt-2" id="about">
       <div className="md:grid md:grid-cols-1 gap-8 items-center">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4 flex items-center">
             About Me
-            <span className="ml-2">
-              <Image src={mapleLeafIcon} alt="Maple Leaf icon" width={48} height={48} />
+            <span className="ml-2 flex items-center">
+              <Image
+                src={mapleLeafIcon}
+                alt="Maple Leaf icon"
+                width={48}
+                height={48}
+                className={`maple-leaf ${iconSpinning ? 'spin' : ''}`}
+                onClick={handleIconClick}
+                style={{ transformOrigin: 'center', cursor: 'pointer' }} />
+            </span>
+            <span
+              className={`text-xs font-normal text-pink-300 ${iconSpinning ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+              wheeeeeeee
             </span>
           </h2>
           <p className="text-base lg:text-xl">
