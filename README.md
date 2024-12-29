@@ -20,6 +20,8 @@ https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 * [Tailwind CSS](https://tailwindcss.com/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [Node.js](https://nodejs.org/) v20.10
+* [EmailJS](https://www.emailjs.com/)
+* [hCaptcha](https://www.hcaptcha.com/)
 
 ## Acknowledgements & Thanks
 
