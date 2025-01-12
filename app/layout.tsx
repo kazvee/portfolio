@@ -6,12 +6,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Karen V. (kazvee) - Portfolio',
-  description: 'Software Developer based in Canada with a strong background in software development, technical writing, and customer-focused technical support.',
+  description: 'IT professional based in Canada with a background in software development, technical writing, and customer-focused tech support. Explore my portfolio to learn more.',
   metadataBase: new URL('https://kazvee.com/'),
   keywords: ['Software Developer', 'Web Developer', 'Software Engineering', 'Technical Writer', 'Portfolio', 'Canada', 'kazvee', 'Karen V.'],
   openGraph: {
     title: 'Karen V. (kazvee) - Portfolio',
-    description: 'IT Professional based in Canada with a background in software development, technical writing, and user-focused tech support. Explore my portfolio to learn more.',
+    description: 'IT professional based in Canada with a background in software development, technical writing, and customer-focused tech support. Explore my portfolio to learn more.',
     url: 'https://kazvee.com/',
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Karen V. (kazvee) - Portfolio',
-    description: 'IT Professional based in Canada with a background in software development, technical writing, and user-focused tech support. Explore my portfolio to learn more.',
+    description: 'IT professional based in Canada with a background in software development, technical writing, and customer-focused tech support. Explore my portfolio to learn more.',
     images: [
       {
         url: '/images/social-media-preview.png',
