@@ -88,7 +88,7 @@ const About: React.FC = () => {
             </span>
           </h2>
           <p className="text-base lg:text-xl">
-            Based in <span className="text-pink-500">Canada</span>, I&apos;m an experienced IT professional with a background in software development, technical writing, and customer-facing tech support. Friendly and collaborative, I enjoy overcoming challenges with a combination of cheerful determination, grit, and resilience gained through an established work ethic. I&apos;d love to explore opportunities to contribute to meaningful projects and conversations, so please feel free to{' '}
+            Based in <span className="text-pink-500">Canada</span>, I&apos;m an experienced IT professional with a background in software development, technical writing, and customer-focused tech support. Friendly and collaborative, I enjoy overcoming challenges with a combination of cheerful determination, grit, and resilience gained through an established work ethic. I&apos;d love to explore opportunities to contribute to meaningful projects and conversations, so please feel free to{' '}
             <Link
               href="https://www.linkedin.com/in/kazvee/"
               target="_blank"
