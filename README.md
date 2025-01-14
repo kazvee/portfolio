@@ -4,7 +4,7 @@ This is the repo for my portfolio website, which you can visit ✨[HERE](https:/
 
 ## Screenshots
 
-![Main View](/public/images/readme/Portfolio_Main.png)
+![Main View](/public/images/readme/Portfolio-Main-View.png)
 
 ![Projects View](/public/images/readme/Portfolio_Projects.png)
 
