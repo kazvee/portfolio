@@ -1,5 +1,5 @@
 'use client';
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
 import Link from 'next/link';
