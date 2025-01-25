@@ -1,11 +1,21 @@
 'use client';
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
 import Link from 'next/link';
 
 const projectsData = [
 
+  {
+    id: 18,
+    title: '🍛 Provisioning',
+    liveDemo: 'https://provisioning.kazvee.com/',
+    gitUrl: 'https://github.com/kazvee/provisioning/#readme',
+    description: 'Online recipe collection with category browsing and quick search features, designed for easy lookup and seamless sharing with friends and family.',
+    tools: '⚙️ React, Docusaurus, Lunr Search, Markdown',
+    image: '/images/projects/project-18.png',
+    tag: ['View All',],
+  },
   {
     id: 17,
     title: '🪶 ezReply',
