@@ -10,7 +10,7 @@ This is the repo for my portfolio website, which you can visit ✨[HERE](https:/
 
 ## Demo Video
 
-Featuring some winter snowfall ❄️
+Featuring some festive snowfall from winter 2024! ❄️
 
 https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 
