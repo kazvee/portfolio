@@ -19,12 +19,13 @@ const projectsData = [
   {
     id: 17,
     title: '🪶 ezReply',
+    liveDemo: 'https://kazvee.com/ezreply/',
     demoVideo: '/images/demos/ezReply_Demo_Video.mp4',
     gitUrl: 'https://github.com/kazvee/ezReply/#readme',
     description: 'Flask-based web app that streamlines customer support by dynamically generating pre-written responses to common queries.',
     tools: '⚙️ Python, Flask, HTML, CSS, Virtual Environment',
     image: '/images/projects/project-17.png',
-    tag: ['View All', 'Quick Concepts'],
+    tag: ['View All', 'Full Stack'],
   },
   {
     id: 16,
