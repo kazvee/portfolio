@@ -91,6 +91,7 @@ const projectsData = [
     id: 10,
     title: '👩‍💻 Portfolio (this website)',
     liveDemo: 'https://kazvee.com/',
+    demoVideo: '/images/readme/Snow_Portfolio_Video.mp4', // File already exists in ReadMe folder
     gitUrl: 'https://github.com/kazvee/portfolio/#readme',
     description: 'Full Stack Web Developer Portfolio Site',
     tools: '⚙️ Next.js, JavaScript, TypeScript, Node.js, HTML, CSS, Tailwind CSS',
