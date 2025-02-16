@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
 import Link from 'next/link';
-import loadingImage from '@/public/images/projects_loading.jpg';
+import loadingImage from '@/public/images/projects-loading.jpg';
 import Image from 'next/image';
 
 interface Project {
