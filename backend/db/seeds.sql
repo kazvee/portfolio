@@ -105,7 +105,7 @@ VALUES
     '/images/readme/Snow_Portfolio_Video.mp4',
     'https://github.com/kazvee/portfolio/#readme',
     'Full Stack Web Developer Portfolio Site.',
-    '⚙️ Next.js, JavaScript, TypeScript, Node.js, HTML, CSS, Tailwind CSS',
+    '⚙️ Next.js, Node.js, JavaScript, TypeScript, API, PostgreSQL, EmailJS, hCaptcha, Dotenv, Tailwind CSS, HTML, CSS',
     '/images/projects/project_8.png',
     ARRAY['View All', 'Full Stack']
   ),
