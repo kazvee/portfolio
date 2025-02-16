@@ -107,7 +107,7 @@ VALUES
     'Full Stack Web Developer Portfolio Site.',
     '⚙️ Next.js, JavaScript, TypeScript, Node.js, HTML, CSS, Tailwind CSS',
     '/images/projects/project_8.png',
-    ARRAY['View All']
+    ARRAY['View All', 'Full Stack']
   ),
 
   (
