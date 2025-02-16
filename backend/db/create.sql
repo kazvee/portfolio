@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS projects;
+
+CREATE TABLE projects
+(
+  id SERIAL PRIMARY KEY NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  livedemo VARCHAR(255),
+  demovideo VARCHAR(255),
+  giturl VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  tools VARCHAR(255) NOT NULL,
+  imgurl VARCHAR(255),
+  tags VARCHAR(255)[] NOT NULL
+);
