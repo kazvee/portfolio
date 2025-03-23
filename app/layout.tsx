@@ -36,6 +36,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: 'https://kazvee.com/',
+  },
 };
 
 export default function RootLayout({
