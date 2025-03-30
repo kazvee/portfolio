@@ -24,7 +24,7 @@ VALUES
 
 (
     '🪶 ezReply',
-    'https://kazvee.com/ezreply/',
+    'https://ezreply.kazvee.com/',
     '/images/demos/ezReply_Demo_Video.mp4',
     'https://github.com/kazvee/ezReply/#readme',
     'Flask-based web app that streamlines customer support by dynamically generating pre-written responses to common queries.',
