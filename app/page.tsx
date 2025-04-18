@@ -28,11 +28,11 @@ const Home = async () => {
       <Navbar />
       <div className='container mt-12 mx-auto px-4 md:px-12 py-4'>
         <Header />
-        <About />
-        <Projects />
-        <Stats />
-        <Blog posts={posts} />
-        <Contact />
+        <section id='about'><About /></section>
+        <section id='projects'><Projects /></section>
+        <section id='stats'><Stats /></section>
+        <section id='blog'><Blog posts={posts} /></section>
+        <section id='contact'><Contact /></section>
       </div>
       <Footer />
     </main>
