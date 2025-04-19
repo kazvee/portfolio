@@ -34,7 +34,6 @@ const BlogPost: React.FC<{ post: Post }> = ({ post }) => {
             <div className='flex flex-col p-4 border border-purple-600 rounded-lg'>
                 <h3 className='text-2xl font-bold text-pink-500 mb-2'>{post.title}</h3>
                 <p className='text-xl mb-2'>{post.description}</p>
-                <p className='text-xl mb-2 flex justify-end text-white'>Read the full article:</p>
                 <div className='flex justify-end'>
                     <Link
                         href={post.url}
@@ -42,7 +41,7 @@ const BlogPost: React.FC<{ post: Post }> = ({ post }) => {
                         rel='noopener noreferrer'
                         aria-label={`Read the full article about ${post.title}`}
                         className='text-transparent font-bold text-xl bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500'>
-                        {post.title}
+                        Read the full article
                     </Link>
                 </div>
             </div>
