@@ -25,6 +25,7 @@ https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 * [hCaptcha](https://www.hcaptcha.com/)
 * [Dotenv](https://www.npmjs.com/package/dotenv/)
 * [PostgreSQL](https://www.postgresql.org/)
+* [PostHog](https://posthog.com/)
 
 ## Acknowledgements & Thanks
 
@@ -60,7 +61,8 @@ https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 
 ### Build the Production-Ready Application
 * Run `npm run build`
-  * This will generate deployment-ready static pages inside the `out` folder
+  * Pre-build checks verify the database and optionally rebuild it after user confirmation
+  * Generates deployment-ready static pages and a sitemap inside the `out` folder
 
 #### Start the Production Server
 * Run `npx serve@latest out`
