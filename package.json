@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "check-db": "pg_isready -h 127.0.0.1 -p 5432 || sudo service postgresql start",
-    "build": "npm run check-db && next build && npx tsx scripts/generate-sitemap.ts",
+    "rebuild-db": "npx tsx scripts/rebuild-db.ts",
+    "build": "npx tsx scripts/prebuild.ts",
     "start": "next start",
     "lint": "next lint"
   },
