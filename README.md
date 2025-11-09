@@ -51,6 +51,8 @@ https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
   * `\i backend/db/create.sql`
 * Seed the database
   * `\i backend/db/seeds.sql`
+* Create `.env` with your PostgreSQL credentials
+  * Use the `.env.example` for guidance
 
 ### Start the Development Server
 * Run `npm run dev`
