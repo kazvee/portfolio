@@ -13,7 +13,7 @@
     "@emailjs/browser": "^4.4.1",
     "@hcaptcha/react-hcaptcha": "^1.11.0",
     "dotenv": "^16.4.7",
-    "next": "^14.2.8",
+    "next": "^14.2.33",
     "pg": "^8.13.3",
     "posthog-js": "^1.245.0",
     "react": "18.3",
