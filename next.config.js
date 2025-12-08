@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Next.js 16 cannot include dynamic server code in a static export
+  // output: 'export', 
   images: {
     unoptimized: true,
   },
