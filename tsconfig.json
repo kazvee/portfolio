@@ -23,18 +23,16 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "@hcaptcha/react-hcaptcha": ["./node_modules/@hcaptcha/react-hcaptcha/types/index.d.ts"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "global.d.ts",
     ".next/types/**/*.ts",
-    "app/providers.tsx",
-    "app/providers.tsx",
     "app/providers.tsx",
     ".next/dev/types/**/*.ts"
   ],
