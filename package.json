@@ -2,12 +2,13 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "rebuild-db": "npx tsx scripts/rebuild-db.ts",
     "build": "npx tsx scripts/prebuild.ts",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
