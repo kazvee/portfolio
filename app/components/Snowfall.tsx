@@ -6,7 +6,7 @@ const Snowfall = () => {
         const snowEmoji = "❄️";
         let timeoutId: number | null = null;
 
-        const addEmoji = (e: MouseEvent) => {
+        const addEmoji = (_e: MouseEvent) => { // Use underscore to avoid ESlint warning
             if (Math.random() > 0.2) return;
             if (timeoutId) return;
 
