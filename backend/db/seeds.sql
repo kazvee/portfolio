@@ -1,6 +1,17 @@
 INSERT INTO projects (title, livedemo, demovideo, giturl, description, tools, imgurl, tags)
 VALUES
 (
+    '🍔 LocalBytes',
+    'https://kazvee.github.io/localbytes/',
+    NULL,
+    'https://github.com/kazvee/localbytes/#readme',
+    'Lightweight, responsive restaurant explorer app. Search meals by dish or cuisine and view recommended dishes.',
+    '⚙️ JavaScript, React, Vite, Fuse.js, Bootstrap, CSS, HTML',
+    '/images/projects/project_18.png',
+    ARRAY['View All']
+),
+
+(
     '🌞 Heliopolis',
     'https://heliopolis.helioho.st/',
     '/images/demos/Heliopolis_Demo_Video.mp4',
