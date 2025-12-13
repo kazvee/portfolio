@@ -55,8 +55,8 @@ const Projects: React.FC = () => {
         My Projects
       </h2>
       <p className='text-[#B6688A] text-center text-sm md:text-base'>
-        Some of my favourite projects are highlighted below. Hover over 
-        (desktop) or tap (mobile) the images to view the code or demos. To see more, check out my{' '}
+        Some of my favourite projects are highlighted below. Hover over (desktop)
+        or tap (mobile) the images to view the code or demos. To see more, check out my{' '}
         <Link
           className='text-white hover:text-pink-500 hover:underline'
           href='https://github.com/kazvee?tab=repositories'
