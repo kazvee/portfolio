@@ -1,11 +1,11 @@
 INSERT INTO projects (title, livedemo, demovideo, giturl, description, tools, imgurl, tags)
 VALUES
 (
-    '🍔 LocalBytes',
-    'https://kazvee.github.io/localbytes/',
+    '🍔 Local Bytes',
+    'https://kazvee.github.io/local-bytes/',
     NULL,
-    'https://github.com/kazvee/localbytes/#readme',
-    'Lightweight, responsive restaurant explorer app. Search meals by dish or cuisine and view recommended dishes.',
+    'https://github.com/kazvee/local-bytes/#readme',
+    'Lightweight, responsive restaurant explorer app. Search by dish or cuisine and view recommended dishes.',
     '⚙️ JavaScript, React, Vite, Fuse.js, Bootstrap, CSS, HTML',
     '/images/projects/project_18.png',
     ARRAY['View All']
