@@ -3,6 +3,16 @@ import { useEffect } from 'react';
 
 const Snowfall = () => {
     useEffect(() => {
+        const now = new Date();
+        const month = now.getMonth() + 1;
+        const date = now.getDate();
+
+        const isSnowSeason =
+            (month === 12 && date >= 15) ||
+            (month === 1 && date <= 6);
+
+        if (!isSnowSeason) return;
+
         const snowEmoji = "❄️";
         let timeoutId: number | null = null;
 
