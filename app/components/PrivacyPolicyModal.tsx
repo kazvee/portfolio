@@ -114,7 +114,7 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
           </section>
 
           <section className='mb-6'>
-            <h3 className='text-xl font-semibold mb-2'>Analytics</h3>
+            <h3 className='text-xl font-semibold mb-2'>Analytics & Cookies</h3>
             <p>
               This site uses
               <Link
@@ -125,21 +125,25 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               >
                 PostHog
               </Link>{' '}
-              for privacy-conscious analytics. It helps me understand how people
-              use the site so I can improve the user experience. No personal
-              data is collected or stored, and all analytics are anonymized.
+              and
+              <Link
+                href='https://www.cloudflare.com/products/web-analytics/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-pink-500 hover:text-pink-600 ml-1'
+              >
+                Cloudflare Web Analytics
+              </Link>{' '}
+              to understand how visitors interact with the site and improve the user experience.
+              <br />
+              <strong>PostHog:</strong> Tracks anonymized user interactions and only runs if you have accepted cookies. It may use cookies to store preferences or session data.
+              <br />
+              <strong>Cloudflare Web Analytics:</strong> Collects pageviews, referrers, and general location (city/country). It does <em>not</em> use cookies or collect personal information.
+              <br /><br />
+              Essential cookies may still be used for security and functionality (like hCaptcha), but no personal information is stored without your consent.
             </p>
           </section>
 
-          <section>
-            <h3 className='text-xl font-semibold mb-2'>Cookies</h3>
-            <p>
-              This site uses a small number of cookies for essential
-              functionality, including hCaptcha and PostHog analytics. These
-              cookies do not store personal information. You can manage or
-              delete cookies through your browser settings.
-            </p>
-          </section>
         </main>
       </div>
     </div>,
