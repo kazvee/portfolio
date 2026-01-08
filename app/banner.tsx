@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { usePostHog } from 'posthog-js/react';
+import { initPostHog } from './posthogClient';
 
 export function cookieConsentGiven(): 'yes' | 'no' | 'undecided' {
   if (typeof window === 'undefined') return 'undecided';
@@ -30,11 +31,13 @@ export default function Banner() {
 
   const acceptCookies = () => {
     localStorage.setItem('cookie_consent', 'yes');
+    initPostHog('yes');
     setConsent('yes');
   };
 
   const declineCookies = () => {
     localStorage.setItem('cookie_consent', 'no');
+    initPostHog('no');
     setConsent('no');
   };
 
