@@ -11,6 +11,11 @@ export const initPostHog = (consent: 'yes' | 'no' | 'undecided') => {
     autocapture: true,
     disable_session_recording: consent !== 'yes',
   });
+
+  // Uncomment for debugging. Make posthog available in console
+  // if (typeof window !== 'undefined') {
+  //   (window as any).posthog = posthog;
+  // }
 };
 
 export default posthog;
