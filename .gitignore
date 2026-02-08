@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# Blog preview data
+/data/posts.json
+
 # next.js
 /.next/
 /out/
