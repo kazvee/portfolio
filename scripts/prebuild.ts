@@ -1,6 +1,7 @@
 import { execSync } from 'child_process';
 import readline from 'readline';
 import dotenv from 'dotenv';
+import { fetchRss } from './fetchRss';
 
 dotenv.config();
 
@@ -40,6 +41,9 @@ const promptYesNo = (question: string): Promise<boolean> => {
     } else {
       console.log('ℹ️ Database will NOT be rebuilt...');
     }
+
+    console.log('🌐 Fetching RSS feed...');
+    await fetchRss();
 
     console.log('👷‍♀️ Building the site...');
     runCommand('next build');
