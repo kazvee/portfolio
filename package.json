@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/fetchRss.js",
     "dev": "next dev",
     "rebuild-db": "npx tsx scripts/rebuild-db.ts",
     "build": "npx tsx scripts/prebuild.ts",
@@ -18,6 +19,7 @@
     "posthog-js": "^1.336.4",
     "react": "18.3",
     "react-dom": "18.3",
+    "rss-parser": "^3.13.0",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
