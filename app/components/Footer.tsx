@@ -60,7 +60,10 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             aria-label="Visit my LinkedIn profile"
           >
-            <Image src={linkedinIcon} alt="LinkedIn logo linking to my profile" />
+            <Image
+              src={linkedinIcon}
+              alt="LinkedIn logo linking to my profile"
+            />
           </Link>
           <Link
             href="https://github.com/kazvee/"

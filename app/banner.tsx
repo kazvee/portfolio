@@ -13,7 +13,7 @@ export function cookieConsentGiven(): 'yes' | 'no' | 'undecided' {
 
 export default function Banner() {
   const [consent, setConsent] = useState<'yes' | 'no' | 'undecided'>(
-    'undecided'
+    'undecided',
   );
   const posthog = usePostHog();
 
@@ -71,7 +71,7 @@ export default function Banner() {
       </p>
       <div style={{ marginLeft: '1rem' }}>
         <button
-          type='button'
+          type="button"
           onClick={acceptCookies}
           style={{
             backgroundColor: 'green',
@@ -87,7 +87,7 @@ export default function Banner() {
           Accept Cookies
         </button>
         <button
-          type='button'
+          type="button"
           onClick={declineCookies}
           style={{
             backgroundColor: 'transparent',

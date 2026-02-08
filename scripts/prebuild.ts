@@ -34,7 +34,9 @@ const promptYesNo = (question: string): Promise<boolean> => {
       runCommand('sudo service postgresql start');
     }
 
-    const rebuild = await promptYesNo('⚠️ Do you want to DROP and RESEED the database before building? 🤔');
+    const rebuild = await promptYesNo(
+      '⚠️ Do you want to DROP and RESEED the database before building? 🤔',
+    );
 
     if (rebuild) {
       runCommand('npm run rebuild-db');

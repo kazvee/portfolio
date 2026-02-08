@@ -7,14 +7,20 @@ interface MenuOverlayProps {
   role?: string;
 }
 
-const MenuOverlay: React.FC<MenuOverlayProps> = ({ links, closeOverlay, role }) => {
+const MenuOverlay: React.FC<MenuOverlayProps> = ({
+  links,
+  closeOverlay,
+  role,
+}) => {
   return (
     <div
       role={role}
       className="flex flex-col py-4 items-center"
       aria-labelledby="menu-title"
     >
-      <h2 id="menu-title" className="sr-only">Navigation Menu</h2>
+      <h2 id="menu-title" className="sr-only">
+        Navigation Menu
+      </h2>
       <ul className="flex flex-col py-4 items-center">
         {links.map((link, index) => (
           <li key={index} onClick={closeOverlay}>

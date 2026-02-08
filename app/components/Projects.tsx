@@ -50,55 +50,55 @@ const Projects: React.FC = () => {
     : [];
 
   return (
-    <section className='pt-2 md:pt-10' id='projects'>
-      <h2 className='text-center text-4xl font-bold text-white mb-4'>
+    <section className="pt-2 md:pt-10" id="projects">
+      <h2 className="text-center text-4xl font-bold text-white mb-4">
         My Projects
       </h2>
-      <p className='text-[#B6688A] text-center text-sm md:text-base'>
+      <p className="text-[#B6688A] text-center text-sm md:text-base">
         Some of my favourite projects are highlighted below. Hover over the
         images to view the code or demos. To see more, check out my{' '}
         <Link
-          className='text-white hover:text-pink-500 hover:underline'
-          href='https://github.com/kazvee?tab=repositories'
-          target='_blank'
-          rel='noopener noreferrer'
+          className="text-white hover:text-pink-500 hover:underline"
+          href="https://github.com/kazvee?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           GitHub
         </Link>{' '}
         account!
       </p>
 
-      <div className='flex flex-row justify-center items-center gap-2 text-white my-6'>
+      <div className="flex flex-row justify-center items-center gap-2 text-white my-6">
         <ProjectTag
-          name='View All'
+          name="View All"
           onClick={handleTagChange}
           isSelected={tag === 'View All'}
         />
         <ProjectTag
-          name='Full Stack'
+          name="Full Stack"
           onClick={handleTagChange}
           isSelected={tag === 'Full Stack'}
         />
         <ProjectTag
-          name='Quick Concepts'
+          name="Quick Concepts"
           onClick={handleTagChange}
           isSelected={tag === 'Quick Concepts'}
         />
       </div>
 
       {loading ? (
-        <div className='flex flex-col items-center justify-center'>
+        <div className="flex flex-col items-center justify-center">
           <Image
             src={loadingImage}
             alt="Raccoon 'and now we wait' meme"
-            className='w-96 rounded-lg'
+            className="w-96 rounded-lg"
           />
         </div>
       ) : (
         <div
-          role='region'
-          aria-labelledby='projects-header'
-          className='grid md:grid-cols-3 gap-8 md:gap-12'
+          role="region"
+          aria-labelledby="projects-header"
+          className="grid md:grid-cols-3 gap-8 md:gap-12"
         >
           {filteredProjects.map((project) => (
             <ProjectCard
@@ -116,7 +116,7 @@ const Projects: React.FC = () => {
         </div>
       )}
 
-      {error && <p className='text-4xl text-center text-red-500'>{error}</p>}
+      {error && <p className="text-4xl text-center text-red-500">{error}</p>}
     </section>
   );
 };

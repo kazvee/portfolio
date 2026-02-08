@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --foreground-hex: #FFFFFF;
-  --background-start-hex: #170E1B;
-  --background-end-hex: #482B56;
+  --foreground-hex: #ffffff;
+  --background-start-hex: #170e1b;
+  --background-end-hex: #482b56;
 }
 
 body {
   color: var(--foreground-hex);
-  background: linear-gradient(to bottom,
-      var(--background-start-hex),
-      var(--background-end-hex));
+  background: linear-gradient(
+    to bottom,
+    var(--background-start-hex),
+    var(--background-end-hex)
+  );
 }
 
 #about,
