@@ -12,6 +12,9 @@
 # Blog preview data
 /data/posts.json
 
+# VS Code settings
+.vscode/settings.json
+
 # next.js
 /.next/
 /out/
