@@ -6,7 +6,9 @@ import posthog, { initPostHog } from './posthogClient';
 import { cookieConsentGiven } from './banner';
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const [consent, setConsent] = useState<'yes' | 'no' | 'undecided'>('undecided');
+  const [consent, setConsent] = useState<'yes' | 'no' | 'undecided'>(
+    'undecided',
+  );
 
   useEffect(() => {
     const initialConsent = cookieConsentGiven();

@@ -19,7 +19,8 @@ const TabButton: React.FC<TabButtonProps> = ({
       aria-selected={active}
       role="tab"
       onClick={selectTab}
-      className="text-left">
+      className="text-left"
+    >
       <p className={`mr-5 font-semibold hover:text-pink-500 ${buttonClasses}`}>
         {children}
       </p>

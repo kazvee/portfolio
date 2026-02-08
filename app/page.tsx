@@ -31,20 +31,30 @@ const Home = async () => {
   const posts = await fetchPosts();
 
   return (
-    <main className='flex min-h-screen flex-col container mx-auto px-4 md:px-12 py-4'>
+    <main className="flex min-h-screen flex-col container mx-auto px-4 md:px-12 py-4">
       <Snowfall />
       <Navbar />
-      <div className='container mt-12 mx-auto px-4 md:px-12 py-4'>
+      <div className="container mt-12 mx-auto px-4 md:px-12 py-4">
         <Header />
-        <section id='about'><About /></section>
-        <section id='projects'><Projects /></section>
-        <section id='stats'><Stats /></section>
-        <section id='blog'><Blog posts={posts} /></section>
-        <section id='contact'><Contact /></section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="stats">
+          <Stats />
+        </section>
+        <section id="blog">
+          <Blog posts={posts} />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
       <Footer />
     </main>
   );
-}
+};
 
 export default Home;
