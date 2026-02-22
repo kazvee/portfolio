@@ -24,11 +24,19 @@ export default function Banner() {
     localStorage.setItem('cookie_consent', 'yes');
     initPostHog('yes');
     setConsent('yes');
+    console.log(
+      '%c🍪 Cookies accepted. Analytics unlocked. Developer happiness +10. 🤩',
+      'color: #be185d; font-weight: bold; font-size: 14px;'
+    );
   };
 
   const declineCookies = () => {
     localStorage.setItem('cookie_consent', 'no');
     setConsent('no');
+    console.log(
+      '%c🛡️ Cookies declined. Developer sadness contained. 🥹',
+      'color: #be185d; font-weight: bold; font-size: 14px;'
+    );
   };
 
   if (consent !== 'undecided') return null;
