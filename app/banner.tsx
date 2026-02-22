@@ -1,44 +1,42 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { usePostHog } from 'posthog-js/react';
 import { initPostHog } from './posthogClient';
 
 export function cookieConsentGiven(): 'yes' | 'no' | 'undecided' {
   if (typeof window === 'undefined') return 'undecided';
-  return (
-    (localStorage.getItem('cookie_consent') as 'yes' | 'no') ?? 'undecided'
-  );
+  return (localStorage.getItem('cookie_consent') as 'yes' | 'no') ?? 'undecided';
 }
 
 export default function Banner() {
-  const [consent, setConsent] = useState<'yes' | 'no' | 'undecided'>(
-    'undecided',
-  );
-  const posthog = usePostHog();
+  const [consent, setConsent] = useState<'yes' | 'no' | 'undecided'>('undecided');
 
   useEffect(() => {
-    setConsent(cookieConsentGiven());
-  }, []);
+    const initialConsent = cookieConsentGiven();
+    setConsent(initialConsent);
 
-  useEffect(() => {
-    if (consent !== 'undecided') {
-      posthog.set_config({
-        persistence: consent === 'yes' ? 'localStorage+cookie' : 'memory',
-      });
+    if (initialConsent !== 'undecided') {
+      initPostHog(initialConsent);
     }
-  }, [consent, posthog]);
+  }, []);
 
   const acceptCookies = () => {
     localStorage.setItem('cookie_consent', 'yes');
     initPostHog('yes');
     setConsent('yes');
+    console.log(
+      '%c🍪 Cookies accepted. Analytics unlocked. Developer happiness +10. 🤩',
+      'color: #be185d; font-weight: bold; font-size: 14px;'
+    );
   };
 
   const declineCookies = () => {
     localStorage.setItem('cookie_consent', 'no');
-    initPostHog('no');
     setConsent('no');
+    console.log(
+      '%c🛡️ Cookies declined. Developer sadness contained. 🥹',
+      'color: #be185d; font-weight: bold; font-size: 14px;'
+    );
   };
 
   if (consent !== 'undecided') return null;
