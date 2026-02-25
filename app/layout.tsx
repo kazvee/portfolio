@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Providers } from './providers';
 import Banner from './banner';
-import CloudflareAnalytics from './CloudflareAnalytics';
 import ChatbotWidget from './components/ChatbotWidget';
 import './globals.css';
 
@@ -65,12 +63,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-          {children}
-          <Banner />
-          <CloudflareAnalytics />
-          <ChatbotWidget />
-        </Providers>
+        <Banner />
+        {children}
+        <ChatbotWidget />
       </body>
     </html>
   );
