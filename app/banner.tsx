@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { initPostHog } from './posthogClient';
 
 export function cookieConsentGiven(): 'yes' | 'no' | 'undecided' {
   if (typeof window === 'undefined') return 'undecided';
@@ -12,18 +11,71 @@ export default function Banner() {
   const [consent, setConsent] = useState<'yes' | 'no' | 'undecided'>('undecided');
 
   useEffect(() => {
-    const initialConsent = cookieConsentGiven();
-    setConsent(initialConsent);
-
-    if (initialConsent !== 'undecided') {
-      initPostHog(initialConsent);
-    }
+    const saved = cookieConsentGiven();
+    setConsent(saved);
+    if (saved === 'yes') window.posthog?.opt_in_capturing()
+    if (saved === 'no') window.posthog?.opt_out_capturing()
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem('cookie_consent', 'yes');
-    initPostHog('yes');
     setConsent('yes');
+
+    if (!document.querySelector('#cf-analytics')) {
+      const cf = document.createElement('script')
+      cf.id = 'cf-analytics'
+      cf.src = 'https://static.cloudflareinsights.com/beacon.min.js'
+      cf.defer = true
+      cf.setAttribute(
+        'data-cf-beacon',
+        `{"token":"${process.env.NEXT_PUBLIC_CLOUDFLARE_TOKEN}"}`
+      )
+      document.head.appendChild(cf)
+    }
+
+    if (!window.posthog) {
+      const s = document.createElement('script')
+      s.src = 'https://app.posthog.com/static/array.js'
+      s.async = true
+      s.onload = () => {
+        window.posthog?.init('phc_fS8id3L1tcXRmcm14zACwCNdtCEBYZUqX9LfgKoCOpq', {
+          api_host: 'https://us.i.posthog.com',
+          person_profiles: 'identified_only',
+          autocapture: true,
+          capture_pageview: true,
+          capture_pageleave: true,
+          mask_all_text: true,
+          mask_all_element_attributes: true,
+        })
+
+        document.addEventListener('click', (e) => {
+          const target = (e.target as HTMLElement).closest('a')
+          if (!target || !target.href) return
+          const isExternal = !target.href.startsWith(window.location.origin)
+          if (isExternal) {
+            window.posthog?.capture('external_link_click', {
+              href: target.href,
+              text: target.textContent,
+            })
+          }
+        })
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id
+              if (id) {
+                window.posthog?.capture('section_view', { section: id })
+              }
+            }
+          })
+        }, { threshold: 0.5 })
+
+        document.querySelectorAll('section[id]').forEach((sec) => observer.observe(sec))
+      }
+      document.body.appendChild(s)
+    }
+
     console.log(
       '%c🍪 Cookies accepted. Analytics unlocked. Developer happiness +10. 🤩',
       'color: #be185d; font-weight: bold; font-size: 14px;'
