@@ -13,15 +13,12 @@ export default function Banner() {
   useEffect(() => {
     const saved = cookieConsentGiven();
     setConsent(saved);
-    if (saved === 'yes') window.posthog?.opt_in_capturing()
-    if (saved === 'no') window.posthog?.opt_out_capturing()
+    if (saved === 'yes') initAnalytics(true)
+    if (saved === 'no') initAnalytics(false)
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('cookie_consent', 'yes');
-    setConsent('yes');
-
-    if (!document.querySelector('#cf-analytics')) {
+  const initAnalytics = (allowCookies: boolean) => {
+    if (allowCookies && !document.querySelector('#cf-analytics')) {
       const cf = document.createElement('script')
       cf.id = 'cf-analytics'
       cf.src = 'https://static.cloudflareinsights.com/beacon.min.js'
@@ -30,65 +27,126 @@ export default function Banner() {
         'data-cf-beacon',
         `{"token":"${process.env.NEXT_PUBLIC_CLOUDFLARE_TOKEN}"}`
       )
-      document.head.appendChild(cf)
+      document.head.appendChild(cf);
+
+      // console.log(
+      //   '%c✅ Cloudflare initialized with cookies ☁️',
+      //   'color: #be185d; font-weight: bold; font-size: 14px;'
+      // );
+    }
+
+    if (!allowCookies) {
+      // console.log(
+      //   '%c⛔ Cloudflare initialized cookieless ☁️',
+      //   'color: #be185d; font-weight: bold; font-size: 14px;'
+      // );
+    }
+
+    if (!document.querySelector('#umami-analytics')) {
+      const u = document.createElement('script');
+      u.id = 'umami-analytics';
+      u.defer = true;
+      u.src = process.env.NEXT_PUBLIC_UMAMI_URL!;
+      u.setAttribute('data-website-id', process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID!);
+      document.head.appendChild(u);
+
+      // console.log(
+      //   allowCookies
+      //     ? '%c✅ Umami initialized with cookies 🍪'
+      //     : '%c⛔ Umami initialized cookieless 🍪',
+      //   'color: #be185d; font-weight: bold; font-size: 14px;'
+      // );
     }
 
     if (!window.posthog) {
       const s = document.createElement('script')
-      s.src = 'https://app.posthog.com/static/array.js'
+      s.src = `${process.env.NEXT_PUBLIC_POSTHOG_REVERSE_PROXY}/static/array.js`
       s.async = true
       s.onload = () => {
-        window.posthog?.init('phc_fS8id3L1tcXRmcm14zACwCNdtCEBYZUqX9LfgKoCOpq', {
-          api_host: 'https://us.i.posthog.com',
+        window.posthog?.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
+          api_host: process.env.NEXT_PUBLIC_POSTHOG_REVERSE_PROXY!,
+          ui_host: 'https://us.posthog.com',
           person_profiles: 'identified_only',
           autocapture: true,
           capture_pageview: true,
           capture_pageleave: true,
+          cookieless_mode: allowCookies ? undefined : 'on_reject',
           mask_all_text: true,
           mask_all_element_attributes: true,
         })
 
-        document.addEventListener('click', (e) => {
-          const target = (e.target as HTMLElement).closest('a')
-          if (!target || !target.href) return
-          const isExternal = !target.href.startsWith(window.location.origin)
-          if (isExternal) {
-            window.posthog?.capture('external_link_click', {
-              href: target.href,
-              text: target.textContent,
-            })
-          }
-        })
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const id = entry.target.id
-              if (id) {
-                window.posthog?.capture('section_view', { section: id })
-              }
-            }
-          })
-        }, { threshold: 0.5 })
-
-        document.querySelectorAll('section[id]').forEach((sec) => observer.observe(sec))
-      }
-      document.body.appendChild(s)
+        // console.log(
+        //   `%c${allowCookies ? '✅ PostHog initialized with cookies 🦔' : '⛔ PostHog initialized cookieless 🦔'}`,
+        //   'color: #be185d; font-weight: bold; font-size: 14px;'
+        // );
+      };
+      document.body.appendChild(s);
     }
 
-    console.log(
-      '%c🍪 Cookies accepted. Analytics unlocked. Developer happiness +10. 🤩',
-      'color: #be185d; font-weight: bold; font-size: 14px;'
-    );
+    document.addEventListener('click', (e) => {
+      if (!window.posthog) return;
+      const target = (e.target as HTMLElement).closest('a')
+      if (!target || !target.href) return
+      if (!target.href.startsWith(window.location.origin)) {
+        window.posthog.capture('external_link_click', {
+          href: target.href,
+          text: target.textContent,
+        })
+      }
+    })
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id
+            if (id && window.posthog)
+              window.posthog.capture('section_view', { section: id })
+          }
+        })
+      }, { threshold: 0.5 })
+
+    document.querySelectorAll('section[id]').forEach((sec) => observer.observe(sec))
+  }
+
+  const removeCookies = () => {
+
+    document.cookie
+      .split(';')
+      .forEach((c) => {
+        if (c.trim().startsWith('ph_')) {
+          document.cookie = `${c.trim()};expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+        }
+      });
+
+    document.cookie
+      .split(';')
+      .forEach((c) => {
+        if (c.trim().startsWith('_umami_')) {
+          document.cookie = `${c.trim()};expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+        }
+      });
+
+    // console.log(
+    //   '%c🛡️ Cookies declined. Developer sadness contained. 🥹',
+    //   'color: #be185d; font-weight: bold; font-size: 14px;'
+    // );
+  };
+
+  const acceptCookies = () => {
+    localStorage.setItem('cookie_consent', 'yes');
+    setConsent('yes');
+    // console.log(
+    //   '%c🤩 Cookies accepted! Developer happiness +10! 📈',
+    //   'color: #be185d; font-weight: bold; font-size: 14px;'
+    // );
+    initAnalytics(true);
   };
 
   const declineCookies = () => {
     localStorage.setItem('cookie_consent', 'no');
     setConsent('no');
-    console.log(
-      '%c🛡️ Cookies declined. Developer sadness contained. 🥹',
-      'color: #be185d; font-weight: bold; font-size: 14px;'
-    );
+    removeCookies();
+    initAnalytics(false);
   };
 
   if (consent !== 'undecided') return null;
@@ -100,8 +158,6 @@ export default function Banner() {
         bottom: 0,
         width: '100%',
         background: 'rgba(190, 24, 93, 0.75)',
-        // background: 'linear-gradient(90deg, #be185d  0%, #831843  100%)',
-        // background: 'linear-gradient(90deg, #482B56 0%, #170E1B 100%)',
         backdropFilter: 'blur(10px)',
         color: '#fff',
         padding: '1rem',
@@ -116,7 +172,7 @@ export default function Banner() {
       }}
     >
       <p style={{ margin: '0 0 1rem', maxWidth: '80%' }}>
-        This site uses cookies so I can tell if anyone scrolls past the header.
+        This site uses cookies so I can tell if anyone scrolls past the header. 
         😄 Please accept cookies to help me keep improving this site. ❤️
       </p>
       <div style={{ marginLeft: '1rem' }}>
