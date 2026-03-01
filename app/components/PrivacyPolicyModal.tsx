@@ -46,7 +46,7 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
 
         <main
           id="privacy-policy-content"
-          className="overflow-y-auto max-h-[60vh] p-4 text-sm text-white border border-pink-500 rounded-lg"
+          className="overflow-y-auto max-h-[70vh] p-4 text-sm text-white border border-pink-500 rounded-lg"
         >
           <section className="mb-6">
             <h3 className="text-xl font-semibold mb-2">hCaptcha</h3>
@@ -124,8 +124,15 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
                 className="text-pink-500 hover:text-pink-600 ml-1"
               >
                 PostHog
-              </Link>{' '}
-              and
+              </Link>,{' '}
+              <Link
+                href="https://umami.is/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pink-500 hover:text-pink-600 ml-1"
+              >
+                Umami
+              </Link>, and{' '}
               <Link
                 href="https://www.cloudflare.com/products/web-analytics/"
                 target="_blank"
@@ -134,21 +141,16 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               >
                 Cloudflare Web Analytics
               </Link>{' '}
-              to understand how visitors interact with the site and improve the
-              user experience.
+              to understand how visitors interact with the site and improve the user experience.
               <br />
-              <strong>PostHog:</strong> Tracks anonymized user interactions and
-              only runs if you have accepted cookies. It may use cookies to
-              store preferences or session data.
+              <strong className="text-[#B6688A]">PostHog:</strong> Runs with cookies if accepted for anonymized tracking, or in cookieless mode if declined, tracking only anonymous pageviews.
               <br />
-              <strong>Cloudflare Web Analytics:</strong> Collects pageviews,
-              referrers, and general location (city/country). It does{' '}
-              <em>not</em> use cookies or collect personal information.
+              <strong className="text-[#B6688A]">Umami:</strong> Runs with cookies if accepted, or in cookieless mode if declined, storing no personal data.
+              <br />
+              <strong className="text-[#B6688A]">Cloudflare Web Analytics:</strong> Collects pageviews, referrers, and general location. Runs with cookies if accepted, or in cookieless mode if declined, storing no personal info.
               <br />
               <br />
-              Essential cookies may still be used for security and functionality
-              (like hCaptcha), but no personal information is stored without
-              your consent.
+              Essential cookies may still be used for security and functionality (like hCaptcha), but no personal information is stored without your consent.
             </p>
           </section>
         </main>
