@@ -25,7 +25,8 @@ https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 - [hCaptcha](https://www.hcaptcha.com/)
 - [Dotenv](https://www.npmjs.com/package/dotenv/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [PostHog](https://posthog.com/)
+- [Umami](https://umami.is/) (privacy-friendly analytics)
+- [Cloudflare Web Analytics](https://cloudflare.com/web-analytics/)
 
 ## Acknowledgements & Thanks
 
