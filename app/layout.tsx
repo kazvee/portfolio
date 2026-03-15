@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Banner from './banner';
 import ChatbotWidget from './components/ChatbotWidget';
 import './globals.css';
 
@@ -63,9 +62,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Banner />
         {children}
         <ChatbotWidget />
+        <script
+          defer
+          src={process.env.NEXT_PUBLIC_UMAMI_URL}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+        />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={`{"token":"${process.env.NEXT_PUBLIC_CLOUDFLARE_TOKEN}"}`}
+        />
       </body>
     </html>
   );

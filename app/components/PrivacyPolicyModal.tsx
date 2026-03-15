@@ -118,21 +118,13 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
             <p>
               This site uses
               <Link
-                href="https://posthog.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-500 hover:text-pink-600 ml-1"
-              >
-                PostHog
-              </Link>,{' '}
-              <Link
                 href="https://umami.is/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-600 ml-1"
               >
                 Umami
-              </Link>, and{' '}
+              </Link> and{' '}
               <Link
                 href="https://www.cloudflare.com/products/web-analytics/"
                 target="_blank"
@@ -143,11 +135,9 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               </Link>{' '}
               to understand how visitors interact with the site and improve the user experience.
               <br />
-              <strong className="text-[#B6688A]">PostHog:</strong> Runs with cookies if accepted for anonymized tracking, or in cookieless mode if declined, tracking only anonymous pageviews.
+              <strong className="text-[#B6688A]">Umami:</strong> Runs in cookieless mode, storing no personal data.
               <br />
-              <strong className="text-[#B6688A]">Umami:</strong> Runs with cookies if accepted, or in cookieless mode if declined, storing no personal data.
-              <br />
-              <strong className="text-[#B6688A]">Cloudflare Web Analytics:</strong> Collects pageviews, referrers, and general location. Runs with cookies if accepted, or in cookieless mode if declined, storing no personal info.
+              <strong className="text-[#B6688A]">Cloudflare Web Analytics:</strong> Collects pageviews, referrers, and general location. Operates in cookieless mode and stores no personal information.
               <br />
               <br />
               Essential cookies may still be used for security and functionality (like hCaptcha), but no personal information is stored without your consent.
