@@ -17,8 +17,8 @@ const fetchPosts = async (): Promise<Post[]> => {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const posts: Post[] = JSON.parse(raw);
 
-  // Keep only the last 3 posts
-  const lastPosts = posts.slice(-3).reverse(); // newest first
+  // Keep the latest 3 posts
+  const lastPosts = posts.slice(0, 3); // newest first
 
   return lastPosts.map((p) => ({
     ...p,
