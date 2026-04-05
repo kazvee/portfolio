@@ -23,7 +23,6 @@ const fetchPosts = async (): Promise<Post[]> => {
   return lastPosts.map((p) => ({
     ...p,
     description: p.description?.trim() || '',
-    truncatedContent: p.truncatedContent?.trim() || '',
   }));
 };
 

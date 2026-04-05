@@ -5,7 +5,6 @@ export interface Post {
   title: string;
   description: string;
   url: string;
-  truncatedContent: string;
 }
 
 interface BlogProps {
@@ -33,9 +32,7 @@ const BlogPost: React.FC<{ post: Post }> = ({ post }) => (
   <div className="my-4 w-full md:w-3/5">
     <div className="flex flex-col p-4 border border-purple-600 rounded-lg">
       <h3 className="text-2xl font-bold text-pink-500 mb-2">{post.title}</h3>
-      <p className="text-xl text-[#B6688A] mb-2">{post.description}</p>
-
-      <p className="text-lg mb-2">{post.truncatedContent}</p>
+      <p className="text-xl mb-2">{post.description}</p>
       <div className="flex justify-end">
         <Link
           href={post.url}
