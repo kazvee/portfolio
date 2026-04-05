@@ -20,7 +20,6 @@ export async function fetchRss() {
     id: index,
     title: item.title || 'Untitled',
     description: item.summary ? item.summary.trim() : '',
-    truncatedContent: item.content ? truncate(item.content.trim(), 300) : '',
     url: `https://blog.kazvee.com${item.link}`,
   }));
 
