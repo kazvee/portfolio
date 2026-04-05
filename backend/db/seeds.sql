@@ -1,6 +1,28 @@
 INSERT INTO projects (title, livedemo, demovideo, giturl, description, tools, imgurl, tags)
 VALUES
 (
+    '🌱 Touch Grass',
+    'https://touchgrass.kazvee.com/',
+    NULL,
+    'https://github.com/kazvee/touchgrass/#readme',
+    'Mobile-first, lightweight tool for discovering places to explore. Find spots and quickly copy their details to share.',
+    '⚙️ PHP, jQuery, JavaScript, CSS, HTML',
+    '/images/projects/project_20.png',
+    ARRAY['View All']
+),
+
+(
+    '📺 Birb TV',
+    NULL,
+    NULL,
+    'https://github.com/kazvee/birb_tv/#readme',
+    'Raspberry Pi camera app for watching and photographing backyard wildlife.',
+    '⚙️ Raspberry Pi, Python, Flask, CSS, HTML',
+    '/images/projects/project_19.png',
+    ARRAY['View All']
+),
+
+(
     '🍔 Local Bytes',
     'https://localbytes.kazvee.com/',
     NULL,
