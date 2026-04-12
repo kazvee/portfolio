@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/fetchRss.js",
+    "predev": "node scripts/fetchRss.mjs",
     "dev": "next dev",
     "rebuild-db": "npx tsx scripts/rebuild-db.ts",
     "build": "npx tsx scripts/prebuild.ts",
