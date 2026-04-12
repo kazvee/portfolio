@@ -7,6 +7,7 @@
     "dev": "next dev",
     "rebuild-db": "npx tsx scripts/rebuild-db.ts",
     "build": "npx tsx scripts/prebuild.ts",
+    "deploy": "bash scripts/deploy.sh",
     "start": "next start",
     "lint": "next lint"
   },
