@@ -22,6 +22,9 @@
 # production
 /build
 
+# deploy config
+scripts/deploy.conf
+
 # misc
 .DS_Store
 *.pem
