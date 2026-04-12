@@ -1,7 +1,7 @@
 import { execSync } from 'child_process';
 import readline from 'readline';
 import dotenv from 'dotenv';
-import { fetchRss } from './fetchRss';
+import { fetchRss } from './fetchRss.mjs';
 
 dotenv.config();
 
