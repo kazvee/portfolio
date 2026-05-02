@@ -200,7 +200,7 @@ VALUES
 
   (
     '🍛 Recipe Rank',
-    'https://kazvee.github.io/recipe-rank/',
+    NULL,
     '/images/demos/Recipe-Rank_Demo_Video.mp4',
     'https://github.com/kazvee/recipe-rank/#readme',
     'Full Stack Recipe Sharing Site enabling users to vote on recipes.',
