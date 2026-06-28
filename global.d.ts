@@ -1,8 +1,8 @@
-export {};
+export { };
 
 declare global {
   interface Window {
-    Tawk_API: any;
-    Tawk_LoadStart: any;
+    Tawk_API?: Record<string, unknown>;
+    Tawk_LoadStart?: Date;
   }
 }

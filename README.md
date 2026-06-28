@@ -16,12 +16,14 @@ https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 
 ## Built With
 
-- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Node.js](https://nodejs.org/)
 - [EmailJS](https://www.emailjs.com/)
+- [RSS Parser](https://www.npmjs.com/package/rss-parser)
 - [hCaptcha](https://www.hcaptcha.com/)
 - [Dotenv](https://www.npmjs.com/package/dotenv/)
 - [PostgreSQL](https://www.postgresql.org/)
@@ -59,19 +61,19 @@ https://github.com/user-attachments/assets/2a143ff7-b9ee-4dd6-a8a9-26abb4717dfa
 ### Start the Development Server
 
 - Run `npm run dev`
-- The development app will be served at [http://localhost:3000](http://localhost:3000/)
-
-### Linting
-
-- To check your code for potential errors, stylistic issues, or other problems, run `npm run lint`
+- The development app will be served at [http://localhost:5173](http://localhost:5173/)
 
 ### Build the Production-Ready Application
 
 - Run `npm run build`
-  - Pre-build checks verify the database and optionally rebuild it after user confirmation
-  - Generates deployment-ready static pages and a sitemap inside the `out` folder
+
+This will:
+- Sync PostgreSQL project data into `src/data`
+- Fetch latest RSS feed
+- Build static site with Vite
+- Generate sitemap in `dist/`
 
 #### Start the Production Server
 
-- Run `npx serve@latest out`
-- The production app will be served at [http://localhost:3000](http://localhost:3000/)
+- Run `npm run preview`
+- The production app will be served at [http://localhost:4173](http://localhost:4173/)

@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 const Stats: React.FC = () => {
   return (
     <section className="pt-2 md:pt-10" id="stats">
@@ -8,20 +5,20 @@ const Stats: React.FC = () => {
         My GitHub Stats
       </h2>
       <div className="flex flex-row justify-center items-center gap-2 text-white my-2">
-        <Link
+        <a
           href="https://github.com/kazvee#-at-a-glance"
           aria-label="View my GitHub activity stats"
         >
-          <Image
+          <img
             src="https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-stats.svg"
             alt="My GitHub activity stats"
             width={440}
             height={456}
           />
-        </Link>
+        </a>
       </div>
       <div className="flex flex-row justify-center items-center">
-        <Image
+        <img
           src="https://raw.githubusercontent.com/kazvee/my-github-stats/main/images/kazvee-github-snake-dark.svg"
           alt="My GitHub Contributions Graph as a Snake Game"
           width={660}

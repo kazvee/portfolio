@@ -1,24 +1,24 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "predev": "node scripts/fetchRss.mjs",
-    "dev": "next dev",
-    "rebuild-db": "npx tsx scripts/rebuild-db.ts",
-    "build": "npx tsx scripts/prebuild.ts",
-    "deploy": "bash scripts/deploy.sh",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "db:reset": "tsx scripts/rebuild-db.ts",
+    "db:sync": "tsx scripts/rebuild-projects.ts",
+    "rss": "node scripts/fetchRss.mjs",
+    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "data": "npm run db:sync && npm run rss",
+    "build": "npm run data && vite build && npm run sitemap",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@hcaptcha/react-hcaptcha": "^1.14.0",
     "dotenv": "^16.4.7",
-    "next": "^14.2.33",
     "pg": "^8.13.3",
-    "react": "18.3",
-    "react-dom": "18.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rss-parser": "^3.13.0",
     "sharp": "^0.33.5"
   },
@@ -27,13 +27,14 @@
     "@types/pg": "^8.11.11",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^6.0.3",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "tsx": "^4.19.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^8.1.0"
   },
   "overrides": {
     "@babel/runtime": "7.28.4"

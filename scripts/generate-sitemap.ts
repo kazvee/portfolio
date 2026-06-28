@@ -26,7 +26,7 @@ const generateSitemap = () => {
         .join('')}
     </urlset>`;
 
-  const sitemapPath = path.join(process.cwd(), 'out', 'sitemap.xml');
+  const sitemapPath = path.join(process.cwd(), 'dist', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemapXml);
 
   console.log('Sitemap generated at', sitemapPath);

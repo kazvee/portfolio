@@ -23,8 +23,11 @@ export async function fetchRss() {
     url: `https://blog.kazvee.com${item.link}`,
   }));
 
-  const dataDir = path.join(process.cwd(), 'data');
-  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
+  const dataDir = path.join(process.cwd(), 'src/data');
+
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
 
   const filePath = path.join(dataDir, 'posts.json');
   fs.writeFileSync(filePath, JSON.stringify(posts, null, 2));

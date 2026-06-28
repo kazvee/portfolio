@@ -15,15 +15,8 @@
 # VS Code settings
 .vscode/settings.json
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# deploy config
-scripts/deploy.conf
+# build output (Vite)
+dist
 
 # misc
 .DS_Store
@@ -42,4 +35,3 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import { createPortal } from 'react-dom';
 
@@ -82,23 +81,23 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               the California Consumer Privacy Act (CCPA). For more information
               about hCaptcha&apos;s privacy policy and terms of use, please
               visit the following links:
-              <Link
+              <a
                 href="https://www.hcaptcha.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-600 ml-1"
               >
                 hCaptcha Privacy Policy
-              </Link>{' '}
+              </a>{' '}
               and
-              <Link
+              <a
                 href="https://www.hcaptcha.com/terms"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-600 ml-1"
               >
                 hCaptcha Terms of Use
-              </Link>
+              </a>
               .
             </p>
           </section>
@@ -117,22 +116,22 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
             <h3 className="text-xl font-semibold mb-2">Analytics & Cookies</h3>
             <p>
               This site uses
-              <Link
+              <a
                 href="https://umami.is/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-600 ml-1"
               >
                 Umami
-              </Link> and{' '}
-              <Link
+              </a> and{' '}
+              <a
                 href="https://www.cloudflare.com/products/web-analytics/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-pink-500 hover:text-pink-600 ml-1"
               >
                 Cloudflare Web Analytics
-              </Link>{' '}
+              </a>{' '}
               to understand how visitors interact with the site and improve the user experience.
               <br />
               <strong className="text-[#B6688A]">Umami:</strong> Runs in cookieless mode, storing no personal data.
@@ -151,3 +150,4 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
 };
 
 export default PrivacyPolicyModal;
+

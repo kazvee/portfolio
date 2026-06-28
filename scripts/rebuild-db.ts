@@ -28,9 +28,9 @@ const rebuildDb = async () => {
     await runSqlFile(client, createSqlPath);
     await runSqlFile(client, seedsSqlPath);
 
-    console.log('✅ Database rebuild complete.');
+    console.log('✅ Database rebuild complete! 😄');
   } catch (err) {
-    console.error('❌ Error during DB rebuild:', err);
+    console.error('❌ Database was not rebuilt! ☹️ Error: ', err);
   } finally {
     await client.end();
   }

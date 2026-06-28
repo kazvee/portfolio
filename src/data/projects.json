@@ -1,0 +1,273 @@
+[
+  {
+    "id": 1,
+    "title": "🌱 Touch Grass",
+    "livedemo": "https://touchgrass.kazvee.com/",
+    "demovideo": null,
+    "giturl": "https://github.com/kazvee/touchgrass/#readme",
+    "description": "Mobile-first, lightweight tool for discovering places to explore. Find spots and quickly copy their details to share.",
+    "tools": "⚙️ PHP, jQuery, JavaScript, CSS, HTML",
+    "imgurl": "/images/projects/project_20.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "📺 Birb TV",
+    "livedemo": null,
+    "demovideo": null,
+    "giturl": "https://github.com/kazvee/birb_tv/#readme",
+    "description": "Raspberry Pi camera app for watching and photographing backyard wildlife.",
+    "tools": "⚙️ Raspberry Pi, Python, Flask, CSS, HTML",
+    "imgurl": "/images/projects/project_19.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "🍔 Local Bytes",
+    "livedemo": "https://localbytes.kazvee.com/",
+    "demovideo": null,
+    "giturl": "https://github.com/kazvee/localbytes/#readme",
+    "description": "Lightweight, responsive restaurant explorer app. Search by dish or cuisine and view recommended dishes.",
+    "tools": "⚙️ JavaScript, React, Vite, Fuse.js, Bootstrap, CSS, HTML",
+    "imgurl": "/images/projects/project_18.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "🌞 Heliopolis",
+    "livedemo": "https://heliopolis.helioho.st/",
+    "demovideo": "/images/demos/Heliopolis_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/heliopolis/#readme",
+    "description": "Cute browser-based exploration game where players can wander freely and interact with in-game elements to discover hidden details.",
+    "tools": "⚙️ JavaScript, Kaplay, Vite, CSS, HTML",
+    "imgurl": "/images/projects/project_17.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "🍛 Provisioning",
+    "livedemo": "https://provisioning.kazvee.com/",
+    "demovideo": null,
+    "giturl": "https://github.com/kazvee/provisioning/#readme",
+    "description": "Online recipe collection with category browsing and quick search features, designed for easy lookup and seamless sharing with friends and family.",
+    "tools": "⚙️ React, Docusaurus, Lunr Search, Markdown, JavaScript, CSS, HTML",
+    "imgurl": "/images/projects/project_16.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "🪶 ezReply",
+    "livedemo": "https://ezreply.kazvee.com/",
+    "demovideo": "/images/demos/ezReply_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/ezReply/#readme",
+    "description": "Flask-based web app that streamlines customer support by dynamically generating pre-written responses to common queries.",
+    "tools": "⚙️ Python, Flask, HTML, CSS, Virtual Environment",
+    "imgurl": "/images/projects/project_15.png",
+    "tags": [
+      "View All",
+      "Full Stack"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "✅ Follow Check",
+    "livedemo": null,
+    "demovideo": null,
+    "giturl": "https://github.com/kazvee/follow-check/#readme",
+    "description": "Web app for managing GitHub following relationships.",
+    "tools": "⚙️ JavaScript, Node.js, Express, Axios, Dotenv, HTML, CSS",
+    "imgurl": "/images/projects/project_14.png",
+    "tags": [
+      "View All",
+      "Quick Concepts"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "📅 Coffee Calendar Events Scheduler",
+    "livedemo": null,
+    "demovideo": "/images/demos/Coffee_Calendar_Events_Scheduler_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/coffee-calendar-events-scheduler/#readme",
+    "description": "Console-based planning app that generates an upcoming events schedule based on user input.",
+    "tools": "⚙️ Java, CLI (Command Line Interface)",
+    "imgurl": "/images/projects/project_13.png",
+    "tags": [
+      "View All",
+      "Quick Concepts"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "🐍 Snake Bytes Dinner Planner",
+    "livedemo": "https://snakebytes.kazvee.com/",
+    "demovideo": "/images/demos/Snake_Bytes_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/snake-bytes/#readme",
+    "description": "A revamped Python dinner planner built with Flask.",
+    "tools": "⚙️ Python, Flask, HTML, CSS, Virtual Environment",
+    "imgurl": "/images/projects/project_12.png",
+    "tags": [
+      "View All",
+      "Quick Concepts"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "💻 Console-based Dinner Planner",
+    "livedemo": null,
+    "demovideo": "/images/demos/Console_Dinner_Planner_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/snake-bytes-console/#readme",
+    "description": "Console app that generates a weekly meal plan based on user input.",
+    "tools": "⚙️ Python, CLI (Command Line Interface)",
+    "imgurl": "/images/projects/project_11.png",
+    "tags": [
+      "View All",
+      "Quick Concepts"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "🐰 Bestie Squad",
+    "livedemo": "https://kazvee.github.io/bestie-squad/",
+    "demovideo": "/images/demos/Bestie_Squad_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/bestie-squad/#readme",
+    "description": "Redux application that enables users to create and manage a list of their best friends.",
+    "tools": "⚙️ Redux (Reducers, Actions, Store), JavaScript, React, HTML, CSS, Yarn, GitHub Pages",
+    "imgurl": "/images/projects/project_10.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "🖼️ Meme Maker",
+    "livedemo": null,
+    "demovideo": "/images/demos/Meme_Maker_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/meme-maker/#readme",
+    "description": "Redux application that enables users to create custom memes.",
+    "tools": "⚙️ Redux (Reducers, Actions, Store), JavaScript, React, HTML, CSS, Thunk, API, Bootstrap",
+    "imgurl": "/images/projects/project_9.png",
+    "tags": [
+      "View All",
+      "Quick Concepts"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "👩‍💻 Portfolio (this website)",
+    "livedemo": "https://kazvee.com/",
+    "demovideo": "/images/readme/Snow_Portfolio_Video.mp4",
+    "giturl": "https://github.com/kazvee/portfolio/#readme",
+    "description": "Full Stack Web Developer Portfolio Site.",
+    "tools": "⚙️ React (migrated from Next.js), Vite, JavaScript, TypeScript, Node.js, API, PostgreSQL, EmailJS, hCaptcha, Dotenv, Tailwind CSS, HTML, CSS",
+    "imgurl": "/images/projects/project_8.png",
+    "tags": [
+      "View All",
+      "Full Stack"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "🪴 Jungle",
+    "livedemo": null,
+    "demovideo": "/images/demos/Jungle_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/jungle_rails/#readme",
+    "description": "Full Stack e-commerce Plant Shop.",
+    "tools": "⚙️ Ruby on Rails, HTML, CSS, SCSS, ERB (Embedded Ruby), MVC (Model-View-Controller) Architecture, Active Record ORM (Object-Relational Mapping), Bootstrap, PostgreSQL, Bcrypt, Stripe, RSpec, Cypress",
+    "imgurl": "/images/projects/project_7.png",
+    "tags": [
+      "View All",
+      "Full Stack"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "📅 Interview Scheduler",
+    "livedemo": null,
+    "demovideo": "/images/demos/Interview_Scheduler_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/scheduler/#readme",
+    "description": "Full Stack Meeting Booking app.",
+    "tools": "⚙️ React, JavaScript, HTML, CSS, SCSS, Node.js, Axios, Dotenv, Cypress, Jest, TDD (Test Driven Development), SPA (Single Page Application), Railway, CircleCI (CI/CD), Netlify",
+    "imgurl": "/images/projects/project_6.png",
+    "tags": [
+      "View All",
+      "Full Stack"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "🖼️ PhotoLabs",
+    "livedemo": null,
+    "demovideo": "/images/demos/PhotoLabs_Demo_Video.webm",
+    "giturl": "https://github.com/kazvee/photolabs/#readme",
+    "description": "Stock Photo browsing app.",
+    "tools": "⚙️ React, JavaScript, HTML, CSS, SCSS, Express, PostgreSQL, API, Babel, Dotenv, SPA (Single Page Application)",
+    "imgurl": "/images/projects/project_5.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "🧮 Two Player Math Game",
+    "livedemo": null,
+    "demovideo": null,
+    "giturl": "https://github.com/kazvee/two_player_game/#readme",
+    "description": "Terminal based Math Game.",
+    "tools": "⚙️ Ruby, OOP (Object Oriented Programming), CLI (Command Line Interface)",
+    "imgurl": "/images/projects/project_4.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "🐦 Tweeter",
+    "livedemo": null,
+    "demovideo": "/images/demos/Tweeter_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/tweeter/#readme",
+    "description": "Single-page Social Media app.",
+    "tools": "⚙️ JavaScript, Node.js, Express, HTML, CSS, SASS, jQuery, AJAX, SPA (Single Page Application)",
+    "imgurl": "/images/projects/project_3.png",
+    "tags": [
+      "View All"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "🍛 Recipe Rank",
+    "livedemo": null,
+    "demovideo": "/images/demos/Recipe-Rank_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/recipe-rank/#readme",
+    "description": "Full Stack Recipe Sharing Site enabling users to vote on recipes.",
+    "tools": "⚙️ React, JavaScript, HTML, CSS, Supabase, GitHub Pages, Netlify",
+    "imgurl": "/images/projects/project_2.png",
+    "tags": [
+      "View All",
+      "Full Stack"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "🐒 Monkey Duck Game",
+    "livedemo": "https://kazvee.github.io/monkey-duck-game/",
+    "demovideo": "/images/demos/Monkey_Duck_Game_Demo_Video.mp4",
+    "giturl": "https://github.com/kazvee/monkey-duck-game/#readme",
+    "description": "Ask the monkeys to shuffle colourful emojis, get ducks in a row, and WIN!",
+    "tools": "⚙️ React, JavaScript, HTML, CSS, GitHub Pages, Surge, SPA (Single Page Application)",
+    "imgurl": "/images/projects/project_1.png",
+    "tags": [
+      "View All",
+      "Quick Concepts"
+    ]
+  }
+]
