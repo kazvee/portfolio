@@ -1,7 +1,3 @@
-'use client';
-import logoImage from '@/public/images/logo-image.png';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import MenuOverlay from './MenuOverlay';
 import Navlink from './Navlink';
@@ -49,14 +45,14 @@ const Navbar: React.FC = () => {
       role="navigation"
     >
       <div className="flex items-center justify-between mx-auto px-4 py-2">
-        <Link href="/" onClick={handleLogoClick} className="px-2 py-4">
-          <Image
-            src={logoImage}
+        <a href="/" onClick={handleLogoClick} className="px-2 py-4">
+          <img
+            src="/images/logo-image.png"
             alt="Return to Home - Logo of a woman and a laptop displaying code"
             width={60}
             height={60}
           />
-        </Link>
+        </a>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button

@@ -1,8 +1,6 @@
-'use client';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import Link from 'next/link';
 
 const Contact: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -97,7 +95,7 @@ const Contact: React.FC = () => {
       </h2>
       <p className="text-base text-pink-500 text-center md:text-3xl my-4">
         The best way to get in touch with me is via{' '}
-        <Link
+        <a
           className="text-blue-600 font-bold hover:text-blue-700"
           href="https://www.linkedin.com/in/kazvee/"
           target="_blank"
@@ -105,7 +103,7 @@ const Contact: React.FC = () => {
           aria-label="Visit my LinkedIn profile"
         >
           LinkedIn
-        </Link>
+        </a>
       </p>
 
       <p className="text-base text-center lg:text-xl mb-4">

@@ -1,8 +1,4 @@
-'use client';
-import Link from 'next/link';
 import { useState } from 'react';
-import Image from 'next/image';
-import mapleLeafIcon from '@/public/images/maple-leaf-icon.png';
 
 const SKILLS_DATA = [
   {
@@ -73,8 +69,8 @@ const About: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-4 flex items-center">
             About Me
             <span className="ml-2 flex items-center">
-              <Image
-                src={mapleLeafIcon}
+              <img
+                src="/images/maple-leaf-icon.png"
                 alt="Maple Leaf icon"
                 width={48}
                 height={48}
@@ -98,7 +94,7 @@ const About: React.FC = () => {
             through an established work ethic. I&apos;d love to explore
             opportunities to contribute to meaningful projects and
             conversations, so please feel free to{' '}
-            <Link
+            <a
               href="https://www.linkedin.com/in/kazvee/"
               target="_blank"
               rel="noopener noreferrer"
@@ -106,7 +102,7 @@ const About: React.FC = () => {
               className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500"
             >
               connect with me on <span className="text-blue-500">LinkedIn</span>
-            </Link>{' '}
+            </a>{' '}
             🙂
           </p>
 
@@ -133,11 +129,10 @@ const About: React.FC = () => {
               {SKILLS_DATA.map((category) => (
                 <button
                   key={category.id}
-                  className={`text-lg lg:text-xl font-bold transition duration-500 ${
-                    hoveredCategory === category.id
-                      ? 'bg-clip-text text-transparent ' + category.gradient
-                      : 'text-pink-500'
-                  }`}
+                  className={`text-lg lg:text-xl font-bold transition duration-500 ${hoveredCategory === category.id
+                    ? 'bg-clip-text text-transparent ' + category.gradient
+                    : 'text-pink-500'
+                    }`}
                   onMouseEnter={() => setHoveredCategory(category.id)}
                   onMouseLeave={() => setHoveredCategory('')}
                   onKeyDown={(e) =>

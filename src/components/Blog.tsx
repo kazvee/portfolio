@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export interface Post {
   id: number;
   title: string;
@@ -34,7 +32,7 @@ const BlogPost: React.FC<{ post: Post }> = ({ post }) => (
       <h3 className="text-2xl font-bold text-pink-500 mb-2">{post.title}</h3>
       <p className="text-xl mb-2">{post.description}</p>
       <div className="flex justify-end">
-        <Link
+        <a
           href={post.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -42,7 +40,7 @@ const BlogPost: React.FC<{ post: Post }> = ({ post }) => (
           className="text-transparent font-bold text-xl bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-purple-500"
         >
           Read the full article
-        </Link>
+        </a>
       </div>
     </div>
   </div>

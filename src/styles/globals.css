@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-hex: #ffffff;
+    --background-start-hex: #170e1b;
+    --background-end-hex: #482b56;
+}
+
+body {
+    color: var(--foreground-hex);
+    background: linear-gradient(to bottom,
+            var(--background-start-hex),
+            var(--background-end-hex));
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+#about,
+#projects,
+#stats {
+    scroll-margin-top: 120px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.snowflake {
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: fall 10s linear forwards;
+    z-index: 9999;
+}
+
+.snowflake-icon {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+@keyframes fall {
+    0% {
+        transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .snowflake {
+        display: none;
+    }
+}
+
+@keyframes spinDiagonalReverse {
+    0% {
+        transform: rotate3d(1, -1, 0, 0deg);
+    }
+
+    100% {
+        /* 8 full rotations */
+        transform: rotate3d(1, -1, 0, 2880deg);
+
+    }
+}
+
+.maple-leaf.spin {
+    animation: spinDiagonalReverse 3s ease-out forwards;
+    transform-style: preserve-3d;
+}
+
+.maple-leaf-container {
+    perspective: 1000px;
+}
+
+.wheeee {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
