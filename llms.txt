@@ -1,0 +1,12 @@
+# Karen V. (kazvee)
+ 
+> IT professional based in Canada with a background in software development, technical writing, testing, and customer-focused tech support.
+ 
+Karen (she/her) is a full stack software developer, working primarily with JavaScript/TypeScript, React, Next.js, Node.js, Python, and Ruby. This site is her portfolio website.
+ 
+## Primary Links
+ 
+- [Portfolio](https://kazvee.com/): Main portfolio site — about, skills, and project showcase
+- [Blog](https://blog.kazvee.com/): Technical blog covering self-hosting, deployment automation, and dev infrastructure notes
+- [GitHub](https://github.com/kazvee): Source code and project repositories
+- [LinkedIn](https://www.linkedin.com/in/kazvee/): Professional profile and primary contact method
