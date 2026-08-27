@@ -11,13 +11,6 @@ export default function RootLayout({
       {children}
       <ChatbotWidget />
 
-      {/* Umami analytics */}
-      <script
-        defer
-        src={import.meta.env.VITE_UMAMI_URL}
-        data-website-id={import.meta.env.VITE_UMAMI_WEBSITE_ID}
-      />
-
       {/* Cloudflare analytics */}
       <script
         defer
