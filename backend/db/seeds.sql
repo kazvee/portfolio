@@ -24,7 +24,7 @@ VALUES
 
 (
     '🍔 Local Bytes',
-    'https://localbytes.kazvee.com/',
+    'https://kazvee.github.io/localbytes/',
     NULL,
     'https://github.com/kazvee/localbytes/#readme',
     'Lightweight, responsive restaurant explorer app. Search by dish or cuisine and view recommended dishes.',
