@@ -9,8 +9,11 @@
 # testing
 /coverage
 
+# Projects data
+/src/data/projects.json
+
 # Blog preview data
-/data/posts.json
+/src/data/posts.json
 
 # VS Code settings
 .vscode/settings.json
