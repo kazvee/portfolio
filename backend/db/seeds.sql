@@ -90,7 +90,7 @@ VALUES
 
   (
     '🐍 Snake Bytes Dinner Planner',
-    'https://snakebytes.kazvee.com/',
+    NULL,
     '/images/demos/Snake_Bytes_Demo_Video.mp4',
     'https://github.com/kazvee/snake-bytes/#readme',
     'A revamped Python dinner planner built with Flask.',
