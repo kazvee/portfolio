@@ -2,7 +2,7 @@ INSERT INTO projects (title, livedemo, demovideo, giturl, description, tools, im
 VALUES
 (
     '🌱 Touch Grass',
-    'https://touchgrass.kazvee.com/',
+    NULL,
     NULL,
     'https://github.com/kazvee/touchgrass/#readme',
     'Mobile-first, lightweight tool for discovering places to explore. Find spots and quickly copy their details to share.',
