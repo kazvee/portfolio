@@ -8,7 +8,7 @@
     "db:sync": "tsx scripts/rebuild-projects.ts",
     "rss": "node scripts/fetchRss.mjs",
     "sitemap": "tsx scripts/generate-sitemap.ts",
-    "data": "npm run db:sync && npm run rss",
+    "data": "npm run db:reset && npm run db:sync && npm run rss",
     "build": "npm run data && vite build && npm run sitemap",
     "preview": "vite preview"
   },
