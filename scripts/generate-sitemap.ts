@@ -6,11 +6,6 @@ const generateSitemap = () => {
 
   const pages = [
     { url: 'https://kazvee.com', lastModified: today },
-    { url: 'https://kazvee.com/#about', lastModified: today },
-    { url: 'https://kazvee.com/#projects', lastModified: today },
-    { url: 'https://kazvee.com/#stats', lastModified: today },
-    { url: 'https://kazvee.com/#blog', lastModified: today },
-    { url: 'https://kazvee.com/#contact', lastModified: today },
   ];
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
